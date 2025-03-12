@@ -288,6 +288,17 @@ public class PlayerController : MonoBehaviour
             anim.updateMode = AnimatorUpdateMode.UnscaledTime;
             StartCoroutine(TeleportAfterFlash());
         }
+        if (collision.CompareTag("Enemies"))
+        {
+            StartCoroutine(flashEffect.StartFlash());
+            Debug.Log("Player hit an enemy!");
+            anim.SetBool("Die", true);
+            anim.SetBool("Jump", false);
+            anim.SetBool("Fall", false);
+            isDead = true;
+
+            Die();
+        }
     }
     
     private IEnumerator TeleportAfterFlash()
@@ -325,15 +336,20 @@ public class PlayerController : MonoBehaviour
     
     private IEnumerator Respawn()
     {
-        yield return new WaitForSeconds(3f);
-        Debug.Log("🔄 Respawning...");
+        Camera.main.transform.position = new Vector3(respawnPoint.position.x, respawnPoint.position.y, Camera.main.transform.position.z);
 
+        
+        yield return new WaitForSeconds(3f);
+
+        Debug.Log("🔄 Respawning...");
+        myBodyCollider.enabled = true;
+        rb.bodyType = RigidbodyType2D.Dynamic;
+        
         // Đưa nhân vật về vị trí checkpoint
         transform.position = respawnPoint.position;
 
         // Reset trạng thái nhân vật
-        rb.bodyType = RigidbodyType2D.Dynamic;
-        myBodyCollider.enabled = true;
+        
         isDead = false;
         anim.SetBool("Die", false);
 
