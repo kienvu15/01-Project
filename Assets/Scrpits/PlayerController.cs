@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,19 +11,23 @@ public class PlayerController : MonoBehaviour
     private AudioSource audioSource;
     private PlayerController playerController;
     public FlashEffect flashEffect;
-
+    public GridSpawner gridSpawner;
+    public Transform respawnPoint;
+    
     Rigidbody2D rb;
     Animator anim;
-    CapsuleCollider2D myBodyCollider;
+    BoxCollider2D myBodyCollider;
     BoxCollider2D myFeetCollider;
     private float gravity;
+    private bool isDead = false;
+    [Space(5)]
 
     [Header("Movement")]
     [SerializeField] float moveSpeed = 6f;
     [SerializeField] float airMoveSpeed = 5f;
     private float moveX;
     private bool isFacingRight = true;
-    
+    [Space(5)]
 
     [Header("Jump")]
     private bool jumping = false;
@@ -42,12 +48,16 @@ public class PlayerController : MonoBehaviour
     public ParticleSystem dust;
     public Transform Foot;
     public GameObject DustBlast;
+    
+
+    
+
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        myBodyCollider = GetComponent<CapsuleCollider2D>();
+        myBodyCollider = GetComponent<BoxCollider2D>();
         myFeetCollider = GetComponent<BoxCollider2D>();
         gravity = rb.gravityScale;
         audioSource = GetComponent<AudioSource>();
@@ -57,10 +67,6 @@ public class PlayerController : MonoBehaviour
     
     void Update()
     {
-        
-            
-        
-
         Grounded();
         Move();
         Glide();
@@ -72,6 +78,7 @@ public class PlayerController : MonoBehaviour
     
     public void Move()
     {
+        if(isDead == true) return;
         moveX = Input.GetAxisRaw("Horizontal");
         float currentSpeed = isGround ? moveSpeed : airMoveSpeed;
         Vector2 movement = new Vector2(moveX * currentSpeed, rb.linearVelocity.y);
@@ -84,6 +91,7 @@ public class PlayerController : MonoBehaviour
     }
     public void DustO()
     {
+        if (isDead == true) return;
         if (isGround && moveX != 0) 
         {
             dust.Play();
@@ -95,6 +103,7 @@ public class PlayerController : MonoBehaviour
     }
     void Glide()
     {
+        if (isDead == true) return;
         if (jumping)
         {
             if (Input.GetKey(KeyCode.Space))
@@ -156,6 +165,7 @@ public class PlayerController : MonoBehaviour
     public bool isDoublejump = false;
     public void Jump()
     {
+        if (isDead == true) return;
         if (Input.GetKeyUp(KeyCode.Space) && rb.linearVelocity.y > 0)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
@@ -171,8 +181,6 @@ public class PlayerController : MonoBehaviour
                 jumpBufferCounter = 0;
                 isDoublejump = false;
                 airjumpCount = 0;
-
-                // ✨ Hiệu ứng DustBlast khi nhảy
                 Instantiate(DustBlast, Foot.position, Quaternion.Euler(0, 0, 90));
             }
             else if (!Grounded() && airjumpCount < maxAirJump && Input.GetKeyDown(KeyCode.Space))
@@ -181,8 +189,6 @@ public class PlayerController : MonoBehaviour
                 jumping = true;
                 isDoublejump = true;
                 airjumpCount++;
-
-                // ✨ Hiệu ứng DustBlast khi double jump
                 Instantiate(DustBlast, Foot.position, Quaternion.identity);
             }
         }
@@ -190,8 +196,16 @@ public class PlayerController : MonoBehaviour
 
     public void CheckVerticalState()
     {
+        if (isDead == true) return;
         float linearVelocityY = rb.linearVelocity.y;
-
+        if(isDead == true)
+        {
+            anim.SetBool("Die", true);
+            anim.SetBool("Jump", false);
+            anim.SetBool("Fall", false);
+            anim.SetBool("Dive", false);
+            anim.SetBool("isRunning", false);
+        }
         if (!Grounded())
         {
             if (linearVelocityY > 0.1f && !isDoublejump)
@@ -218,6 +232,11 @@ public class PlayerController : MonoBehaviour
                 {
                     anim.SetBool("Dive", false);
                     anim.SetBool("Fall", true);
+                    if (isDead == true)
+                    {
+                        anim.SetBool("Fall", false);
+                        anim.SetBool("Die", true);
+                    }
                 }
             }
         }
@@ -248,7 +267,6 @@ public class PlayerController : MonoBehaviour
         {
             coyoteTimeCount -= Time.deltaTime;
         }
-
         if (Input.GetKeyDown(KeyCode.Space))
         {
             jumpBufferCounter = jumpBufferFrames;
@@ -264,35 +282,64 @@ public class PlayerController : MonoBehaviour
         if (collision.CompareTag("Portal"))
         {
             Debug.Log("🔄 Teleporting...");
-
-            // Tắt di chuyển nhân vật
             playerController.enabled = false;
             rb.linearVelocity = Vector2.zero;
-
-            // Đổi Rigidbody2D thành Kinematic
             rb.bodyType = RigidbodyType2D.Kinematic;
-
-            // Đảm bảo Animator chạy dù Time.timeScale thay đổi
             anim.updateMode = AnimatorUpdateMode.UnscaledTime;
-
-            // Bắt đầu hiệu ứng chớp sáng
             StartCoroutine(TeleportAfterFlash());
         }
     }
-
+    
     private IEnumerator TeleportAfterFlash()
     {
-        // Chạy hiệu ứng flash
-        yield return StartCoroutine(flashEffect.StartFlash());
-
-        // Sau khi flash, di chuyển nhân vật
         transform.position = PortalFinish.transform.position;
-
-        // Chạy animation
+        yield return StartCoroutine(flashEffect.StartFlash());
         anim.Play("Spin");
+        StartCoroutine(gridSpawner.SpawnGrid());
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("Collision with: " + collision.gameObject.name);
+        if (collision.gameObject.CompareTag("Enemies") && !isDead)
+        {
+            StartCoroutine(flashEffect.StartFlash());
+            Debug.Log("Player hit an enemy!");
+            anim.SetBool("Die", true);
+            anim.SetBool("Jump", false);
+            anim.SetBool("Fall", false);
+            isDead = true;
+            
+            Die();
+        }
     }
 
 
+    private void Die()
+    {
+        Debug.Log("💀 Player Died!");
+        rb.AddForce(new Vector2(0, 15f), ForceMode2D.Impulse);
+        myBodyCollider.enabled = false;
+        StartCoroutine(Respawn());
+    }
+    
+    private IEnumerator Respawn()
+    {
+        yield return new WaitForSeconds(3f);
+        Debug.Log("🔄 Respawning...");
+
+        // Đưa nhân vật về vị trí checkpoint
+        transform.position = respawnPoint.position;
+
+        // Reset trạng thái nhân vật
+        rb.bodyType = RigidbodyType2D.Dynamic;
+        myBodyCollider.enabled = true;
+        isDead = false;
+        anim.SetBool("Die", false);
+
+        // Reset animation
+        anim.Play("Idle");
+    }
 
 
 
