@@ -447,7 +447,20 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tileset-745_0: -5733304041689028064
+      tileset-745_1: -3448243854920426914
+      tileset-745_10: 1305854677324380138
+      tileset-745_11: 7655839601447959124
+      tileset-745_12: -5290794081965645833
+      tileset-745_2: 4335994082123634534
+      tileset-745_3: -9154246877513005972
+      tileset-745_4: -6292262615627019399
+      tileset-745_5: -1502844565475813567
+      tileset-745_6: -1875699225167236622
+      tileset-745_7: 5269341655129707997
+      tileset-745_8: -1154184973394036303
+      tileset-745_9: 1932498689931730379
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
