@@ -9,7 +9,7 @@ public class BackgroundScroll : MonoBehaviour
     [SerializeField] private float x, y;
     void Start()
     {
-        
+        //hjghghjgjhghjgjh
     }
 
     void Update()
