@@ -1,9 +1,14 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] AudioClip jumpSound;
     private AudioSource audioSource;
+    private PlayerController playerController;
+    public FlashEffect flashEffect;
 
     Rigidbody2D rb;
     Animator anim;
@@ -11,6 +16,11 @@ public class PlayerController : MonoBehaviour
     BoxCollider2D myFeetCollider;
     private float gravity;
 
+    [Header("Movement")]
+    [SerializeField] float moveSpeed = 6f;
+    [SerializeField] float airMoveSpeed = 5f;
+    private float moveX;
+    private bool isFacingRight = true;
     
 
     [Header("Jump")]
@@ -23,8 +33,15 @@ public class PlayerController : MonoBehaviour
     private float airjumpCount = 0;
     public float maxAirJump;
     private bool isGround;
+    public float glideGravityScale = 0.5f;
+    public float fallGravityScale = 2f;
+    [Space(5)]
 
-    
+    [Header("Object")]
+    public Transform PortalFinish;
+    public ParticleSystem dust;
+    public Transform Foot;
+    public GameObject DustBlast;
 
     void Start()
     {
@@ -34,91 +51,82 @@ public class PlayerController : MonoBehaviour
         myFeetCollider = GetComponent<BoxCollider2D>();
         gravity = rb.gravityScale;
         audioSource = GetComponent<AudioSource>();
+        playerController = GetComponent<PlayerController>();
     }
 
-
-
-    public float glideGravityScale = 0.5f; // Trọng lực khi lượn
-    public float fallGravityScale = 2f;
-
-    // Cập nhật trong `Update()`
+    
     void Update()
     {
+        
+            
+        
+
         Grounded();
-        
-
-
-        
-            Move();
-
+        Move();
         Glide();
         Jump();
-        
         CheckVerticalState();
         UpdateJumpVariales();
+        DustO();
     }
-
-    [Header("Movement")]
-    [SerializeField] float moveSpeed = 10f;
-    [SerializeField] float airMoveSpeed = 6f; // Tốc độ di chuyển khi ở trên không
-    private float moveX;
-    private bool isFacingRight = true;
-
+    
     public void Move()
     {
         moveX = Input.GetAxisRaw("Horizontal");
-
-        // Nếu đang ở trên không, dùng airMoveSpeed
         float currentSpeed = isGround ? moveSpeed : airMoveSpeed;
-
         Vector2 movement = new Vector2(moveX * currentSpeed, rb.linearVelocity.y);
         rb.linearVelocity = movement;
-
         anim.SetBool("isRunning", moveX != 0);
-
         if ((moveX > 0 && !isFacingRight) || (moveX < 0 && isFacingRight))
         {
             Flip();
+        }  
+    }
+    public void DustO()
+    {
+        if (isGround && moveX != 0) 
+        {
+            dust.Play();
+        }
+        else
+        {
+            dust.Stop();
         }
     }
-
-
     void Glide()
     {
         if (jumping)
         {
-            if (Input.GetKey(KeyCode.Space)) // Giữ Space để lượn
+            if (Input.GetKey(KeyCode.Space))
             {
                 rb.gravityScale = glideGravityScale;
-                anim.SetBool("Dive", true); // Bật animation Dive
+                anim.SetBool("Dive", true);
             }
-            else // Thả Space thì rơi nhanh hơn
+            else
             {
                 rb.gravityScale = fallGravityScale;
-                anim.SetBool("Dive", false); // Tắt animation Dive
+                anim.SetBool("Dive", false);
             }
         }
-        if (!isGround && rb.linearVelocity.y < 0) // Chỉ kích hoạt khi đang rơi xuống sau khi nhảy
+        if (!isGround && rb.linearVelocity.y < 0)
         {
-            if (Input.GetKey(KeyCode.Space)) // Giữ Space để lượn
+            if (Input.GetKey(KeyCode.Space))
             {
                 rb.gravityScale = glideGravityScale;
-                anim.SetBool("Dive", true); // Bật animation Dive
+                anim.SetBool("Dive", true);
             }
-            else // Thả Space thì rơi nhanh hơn
+            else
             {
                 rb.gravityScale = fallGravityScale;
-                anim.SetBool("Dive", false); // Tắt animation Dive
+                anim.SetBool("Dive", false);
             }
         }
-        else // Khi chạm đất hoặc đang nhảy lên thì giữ trọng lực mặc định
+        else
         {
             rb.gravityScale = gravity;
-            anim.SetBool("Dive", false); // Đảm bảo tắt Dive khi không lượn
+            anim.SetBool("Dive", false);
         }
     }
-
-
 
     private bool Grounded()
     {
@@ -137,10 +145,6 @@ public class PlayerController : MonoBehaviour
         return grounded;
     }
 
-   
-
-
-    
     void Flip()
     {
         isFacingRight = !isFacingRight;
@@ -149,42 +153,40 @@ public class PlayerController : MonoBehaviour
         transform.localScale = scale;
     }
 
-
-
     public bool isDoublejump = false;
     public void Jump()
     {
-        // Nếu người chơi nhả phím Space khi đang nhảy lên, cắt ngắn lực nhảy (jump cut)
         if (Input.GetKeyUp(KeyCode.Space) && rb.linearVelocity.y > 0)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
             jumping = false;
         }
 
-        // Nếu chưa nhảy
         if (!jumping)
         {
-            // Nhảy bình thường (Jump Buffer + Coyote Time)
             if (jumpBufferCounter > 0 && coyoteTimeCount > 0)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
                 jumping = true;
                 jumpBufferCounter = 0;
                 isDoublejump = false;
-                airjumpCount = 0; // Reset số lần nhảy trên không
+                airjumpCount = 0;
+
+                // ✨ Hiệu ứng DustBlast khi nhảy
+                Instantiate(DustBlast, Foot.position, Quaternion.Euler(0, 0, 90));
             }
-            
-            // Xử lý Double Jump
             else if (!Grounded() && airjumpCount < maxAirJump && Input.GetKeyDown(KeyCode.Space))
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
                 jumping = true;
                 isDoublejump = true;
                 airjumpCount++;
+
+                // ✨ Hiệu ứng DustBlast khi double jump
+                Instantiate(DustBlast, Foot.position, Quaternion.identity);
             }
         }
     }
-
 
     public void CheckVerticalState()
     {
@@ -200,8 +202,6 @@ public class PlayerController : MonoBehaviour
             }
             else if (linearVelocityY > 0.1f && isDoublejump)
             {
-                anim.SetTrigger("Jump2");
-                anim.SetBool("jump2", true);
                 anim.SetBool("Jump", false);
                 anim.SetBool("Fall", false);
                 anim.SetBool("Dive", false);
@@ -209,7 +209,7 @@ public class PlayerController : MonoBehaviour
             }
             else if (linearVelocityY < -0.1f)
             {
-                if (Input.GetKey(KeyCode.Space)) // Nếu đang lượn thì không bật Fall
+                if (Input.GetKey(KeyCode.Space))
                 {
                     anim.SetBool("Dive", true);
                     anim.SetBool("Fall", false);
@@ -226,7 +226,7 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("jump2", false);
             anim.SetBool("Jump", false);
             anim.SetBool("Fall", false);
-            anim.SetBool("Dive", false); // Khi chạm đất, tắt Dive
+            anim.SetBool("Dive", false);
         }
     }
 
@@ -258,4 +258,42 @@ public class PlayerController : MonoBehaviour
             jumpBufferCounter--;
         }
     }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Portal"))
+        {
+            Debug.Log("🔄 Teleporting...");
+
+            // Tắt di chuyển nhân vật
+            playerController.enabled = false;
+            rb.linearVelocity = Vector2.zero;
+
+            // Đổi Rigidbody2D thành Kinematic
+            rb.bodyType = RigidbodyType2D.Kinematic;
+
+            // Đảm bảo Animator chạy dù Time.timeScale thay đổi
+            anim.updateMode = AnimatorUpdateMode.UnscaledTime;
+
+            // Bắt đầu hiệu ứng chớp sáng
+            StartCoroutine(TeleportAfterFlash());
+        }
+    }
+
+    private IEnumerator TeleportAfterFlash()
+    {
+        // Chạy hiệu ứng flash
+        yield return StartCoroutine(flashEffect.StartFlash());
+
+        // Sau khi flash, di chuyển nhân vật
+        transform.position = PortalFinish.transform.position;
+
+        // Chạy animation
+        anim.Play("Spin");
+    }
+
+
+
+
+
 }
