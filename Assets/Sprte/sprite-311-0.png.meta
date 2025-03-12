@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: 84cc07f4e6402c94cab8f85b8e8d43e5
+guid: f019bfe0b078a1149a4ffbef8c3cf8bd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 633928474938443724
-    second: sprite-1184-0 (1)_0
+      213: -264079098446513585
+    second: sprite-311-0_0
   - first:
-      213: 2848902135489982212
-    second: sprite-1184-0 (1)_1
+      213: -3839987373454303768
+    second: sprite-311-0_1
   - first:
-      213: 1429961457245891469
-    second: sprite-1184-0 (1)_2
+      213: -7297817119576367274
+    second: sprite-311-0_2
+  - first:
+      213: -3828424112255489168
+    second: sprite-311-0_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -57,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 30
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
@@ -119,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprite-1184-0 (1)_0
+      name: sprite-311-0_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 66
-        width: 66
-        height: 66
+        y: 31
+        width: 7
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,42 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cc706b9d69a2cc800800000000000000
-      internalID: 633928474938443724
+      spriteID: f4a7d78857dc55cf0800000000000000
+      internalID: -264079098446513585
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite-1184-0 (1)_1
-      rect:
-        serializedVersion: 2
-        x: 66
-        y: 66
-        width: 66
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 40f6bb9e565598720800000000000000
-      internalID: 2848902135489982212
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprite-1184-0 (1)_2
+      name: sprite-311-0_1
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 66
-        height: 66
+        width: 18
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,8 +159,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d8b24ad7e5e38d310800000000000000
-      internalID: 1429961457245891469
+      spriteID: 8ed554734df95bac0800000000000000
+      internalID: -3839987373454303768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-311-0_2
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 21
+        width: 48
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65fd2e7cef1f8ba90800000000000000
+      internalID: -7297817119576367274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-311-0_3
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 9
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07ba873cd84bedac0800000000000000
+      internalID: -3828424112255489168
       vertices: []
       indices: 
       edges: []
@@ -188,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8ac2676cf5840fd498a7c6047540eb51
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -197,10 +222,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      sprite-1184-0 (1)_0: 633928474938443724
-      sprite-1184-0 (1)_1: 2848902135489982212
-      sprite-1184-0 (1)_2: 1429961457245891469
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

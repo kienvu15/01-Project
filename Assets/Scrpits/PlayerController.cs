@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] AudioClip jumpSound;
     private AudioSource audioSource;
+    private PlayerController playerController;
+    public FlashEffect flashEffect;
 
     Rigidbody2D rb;
     Animator anim;
@@ -18,6 +21,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float airMoveSpeed = 5f;
     private float moveX;
     private bool isFacingRight = true;
+    
 
     [Header("Jump")]
     private bool jumping = false;
@@ -31,8 +35,10 @@ public class PlayerController : MonoBehaviour
     private bool isGround;
     public float glideGravityScale = 0.5f;
     public float fallGravityScale = 2f;
+    [Space(5)]
 
-
+    [Header("Object")]
+    public Transform PortalFinish;
     public ParticleSystem dust;
     public Transform Foot;
     public GameObject DustBlast;
@@ -45,11 +51,16 @@ public class PlayerController : MonoBehaviour
         myFeetCollider = GetComponent<BoxCollider2D>();
         gravity = rb.gravityScale;
         audioSource = GetComponent<AudioSource>();
+        playerController = GetComponent<PlayerController>();
     }
 
     
     void Update()
     {
+        
+            
+        
+
         Grounded();
         Move();
         Glide();
@@ -177,7 +188,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
     public void CheckVerticalState()
     {
         float linearVelocityY = rb.linearVelocity.y;
@@ -192,8 +202,6 @@ public class PlayerController : MonoBehaviour
             }
             else if (linearVelocityY > 0.1f && isDoublejump)
             {
-                anim.SetTrigger("Jump2");
-                anim.SetBool("jump2", true);
                 anim.SetBool("Jump", false);
                 anim.SetBool("Fall", false);
                 anim.SetBool("Dive", false);
@@ -250,4 +258,42 @@ public class PlayerController : MonoBehaviour
             jumpBufferCounter--;
         }
     }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Portal"))
+        {
+            Debug.Log("🔄 Teleporting...");
+
+            // Tắt di chuyển nhân vật
+            playerController.enabled = false;
+            rb.linearVelocity = Vector2.zero;
+
+            // Đổi Rigidbody2D thành Kinematic
+            rb.bodyType = RigidbodyType2D.Kinematic;
+
+            // Đảm bảo Animator chạy dù Time.timeScale thay đổi
+            anim.updateMode = AnimatorUpdateMode.UnscaledTime;
+
+            // Bắt đầu hiệu ứng chớp sáng
+            StartCoroutine(TeleportAfterFlash());
+        }
+    }
+
+    private IEnumerator TeleportAfterFlash()
+    {
+        // Chạy hiệu ứng flash
+        yield return StartCoroutine(flashEffect.StartFlash());
+
+        // Sau khi flash, di chuyển nhân vật
+        transform.position = PortalFinish.transform.position;
+
+        // Chạy animation
+        anim.Play("Spin");
+    }
+
+
+
+
+
 }
