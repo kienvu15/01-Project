@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="35116562-db7b-4635-ad62-e482e1001bcf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scrpits/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scrpits/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/tileset/tileset-255.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/tileset/tileset-255.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="35116562-db7b-4635-ad62-e482e1001bcf" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,7 +93,7 @@
       <workItem from="1741853039093" duration="136000" />
       <workItem from="1741853233479" duration="326000" />
       <workItem from="1741853590576" duration="391000" />
-      <workItem from="1741854691241" duration="926000" />
+      <workItem from="1741854691241" duration="1504000" />
     </task>
     <task id="LOCAL-00001" summary="capnhap">
       <option name="closed" value="true" />
