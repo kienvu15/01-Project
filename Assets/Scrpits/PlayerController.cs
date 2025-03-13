@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     public GridSpawner gridSpawner;
     public Transform respawnPoint;
     public SoftBlock[] softBlocks;
-
+    public FallBrick FallBrick;
 
     Rigidbody2D rb;
     Animator anim;
@@ -340,28 +340,27 @@ public class PlayerController : MonoBehaviour
         myBodyCollider.enabled = false;
         StartCoroutine(Respawn());
     }
-    
+
     private IEnumerator Respawn()
     {
         Camera.main.transform.position = new Vector3(respawnPoint.position.x, respawnPoint.position.y, Camera.main.transform.position.z);
 
-        
         yield return new WaitForSeconds(3f);
 
         Debug.Log("🔄 Respawning...");
         myBodyCollider.enabled = true;
         rb.bodyType = RigidbodyType2D.Dynamic;
-        
+
         // Đưa nhân vật về vị trí checkpoint
         transform.position = respawnPoint.position;
 
         // Reset trạng thái nhân vật
-        
         isDead = false;
         anim.SetBool("Die", false);
-
-        // Reset animation
         anim.Play("Idle");
+
+        // Reset các gạch rơi
+        FallBrick.ResetAllBricks();
     }
 
     void ResetSoftBlocks()
