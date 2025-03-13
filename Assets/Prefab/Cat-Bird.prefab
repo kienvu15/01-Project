@@ -5070,7 +5070,7 @@ MonoBehaviour:
   respawnPoint: {fileID: 0}
   moveSpeed: 3.5
   airMoveSpeed: 5
-  jumpForce: 8.9
+  jumpForce: 6.9
   jumpBufferFrames: 1
   coyoteTime: 0.1
   maxAirJump: 0

@@ -8,6 +8,8 @@ TagManager:
   - Enemies
   - LockDoor
   - Key
+  - Box
+  - Button
   layers:
   - Default
   - TransparentFX
