@@ -21,6 +21,14 @@ public class LockDoor : MonoBehaviour
             Debug.LogWarning("Animator chưa được gán trên object này!");
         }
     }
+    public void Deactive()
+    {
+        gameObject.SetActive(false);
+    }
+    public void Actice()
+    {
+        gameObject.SetActive(true);
+    }
     public void DoneAnim()
     {
         Destroy(gameObject);

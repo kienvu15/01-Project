@@ -36,7 +36,8 @@ public class Chain2 : MonoBehaviour
     private void MoveTrapToTarget()
     {
         Transform currentTarget = movePoints[currentTargetIndex];
-        rb.position = Vector2.MoveTowards(rb.position, currentTarget.position, moveSpeed * Time.deltaTime);
+        rb.MovePosition(Vector2.MoveTowards(rb.position, currentTarget.position, moveSpeed * Time.deltaTime));
+
 
         if (Vector2.Distance(rb.position, currentTarget.position) < 0.1f)
         {

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PressureButton : MonoBehaviour
+public class HoldPressureButton : MonoBehaviour
 {
     private Animator anim;
     private int objectCount = 0; // Đếm số object đang chạm vào nút
@@ -40,6 +40,15 @@ public class PressureButton : MonoBehaviour
             {
                 anim.Play("Button"); // Quay về trạng thái ban đầu
                 Debug.Log("🔵 Nút nhả ra!");
+                isUsed = false;
+                foreach (GameObject door in lockdoor)
+                {
+                    LockDoor lockDoorScript = door.GetComponent<LockDoor>();
+                    if (lockDoorScript != null)
+                    {
+                        lockDoorScript.Actice();
+                    }
+                }
             }
         }
     }
