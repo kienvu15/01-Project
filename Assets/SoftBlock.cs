@@ -12,6 +12,7 @@ public class SoftBlock : MonoBehaviour
     [SerializeField] private float fallDelay = 1f;
     [SerializeField] private float destroyDelay = 2f;
 
+
     void Start()
     {
         anim = GetComponent<Animator>();
