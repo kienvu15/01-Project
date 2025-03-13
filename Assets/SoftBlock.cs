@@ -21,15 +21,15 @@ public class SoftBlock : MonoBehaviour
         initialPosition = transform.position; // Lưu vị trí ban đầu
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
             isActivated = true;
             anim.Play("Zinggel_Sofr");
         }
     }
-
+    
     public void DeActive()
     {
         boxCollider.enabled = false;

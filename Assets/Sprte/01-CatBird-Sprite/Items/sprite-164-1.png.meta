@@ -63,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 19
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
@@ -129,9 +129,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 9
-        width: 15
-        height: 6
+        y: 10
+        width: 16
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,10 +150,10 @@ TextureImporter:
       name: sprite-164-1_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 15
-        height: 9
+        x: 16
+        y: 10
+        width: 16
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,10 +172,10 @@ TextureImporter:
       name: sprite-164-1_2
       rect:
         serializedVersion: 2
-        x: 15
-        y: 9
+        x: 32
+        y: 10
         width: 16
-        height: 11
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,10 +194,10 @@ TextureImporter:
       name: sprite-164-1_3
       rect:
         serializedVersion: 2
-        x: 31
-        y: 9
+        x: 0
+        y: 0
         width: 16
-        height: 11
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,10 +216,10 @@ TextureImporter:
       name: sprite-164-1_4
       rect:
         serializedVersion: 2
-        x: 15
+        x: 16
         y: 0
         width: 16
-        height: 6
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a7ee22d48774f5c48bb6f2cc11f3cf09
     internalID: 0
     vertices: []
     indices: 
@@ -247,7 +247,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sprite-164-1_0: 5941797497634722783
+      sprite-164-1_1: 4780532227708450257
+      sprite-164-1_2: 2985195589804790922
+      sprite-164-1_3: 7623939975428223264
+      sprite-164-1_4: -4042871233841958188
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

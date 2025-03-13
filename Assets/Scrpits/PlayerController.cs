@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public FlashEffect flashEffect;
     public GridSpawner gridSpawner;
     public Transform respawnPoint;
-    public SoftBlock softBlock;
+    public SoftBlock[] softBlocks;
 
 
     Rigidbody2D rb;
@@ -76,6 +76,10 @@ public class PlayerController : MonoBehaviour
         CheckVerticalState();
         UpdateJumpVariales();
         DustO();
+        if (isDead)
+        {
+            ResetSoftBlocks();
+        }
     }
     
     public void Move()
@@ -301,6 +305,7 @@ public class PlayerController : MonoBehaviour
 
             Die();
         }
+        
     }
     
     private IEnumerator TeleportAfterFlash()
@@ -357,6 +362,14 @@ public class PlayerController : MonoBehaviour
 
         // Reset animation
         anim.Play("Idle");
+    }
+
+    void ResetSoftBlocks()
+    {
+        foreach (SoftBlock block in softBlocks)
+        {
+            block.ResetPlatform();
+        }
     }
 
 
