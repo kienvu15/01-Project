@@ -13,7 +13,9 @@ public class PlayerController : MonoBehaviour
     public FlashEffect flashEffect;
     public GridSpawner gridSpawner;
     public Transform respawnPoint;
-    
+    public SoftBlock softBlock;
+
+
     Rigidbody2D rb;
     Animator anim;
     BoxCollider2D myBodyCollider;

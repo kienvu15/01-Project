@@ -5074,7 +5074,7 @@ MonoBehaviour:
   jumpBufferFrames: 1
   coyoteTime: 0.1
   maxAirJump: 0
-  glideGravityScale: 0.14
+  glideGravityScale: 0.1
   fallGravityScale: 2
   PortalFinish: {fileID: 0}
   dust: {fileID: 102977601251105902}
