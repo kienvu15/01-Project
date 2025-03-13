@@ -10,7 +10,8 @@ public class SoftBlock : MonoBehaviour
     private bool isActivated = false;
 
     [SerializeField] private float fallDelay = 1f;
-   
+    [SerializeField] private float destroyDelay = 2f;
+
 
     void Start()
     {

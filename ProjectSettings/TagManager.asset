@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Portal
+  - Enemies
+  - LockDoor
+  - Key
+  - Box
+  - Button
   layers:
   - Default
   - TransparentFX
@@ -40,6 +46,12 @@ TagManager:
   m_SortingLayers:
   - name: BGGB
     uniqueID: 1298267891
+    locked: 0
+  - name: Back
+    uniqueID: 2710771761
+    locked: 0
+  - name: Player
+    uniqueID: 4280857425
     locked: 0
   - name: Default
     uniqueID: 0
