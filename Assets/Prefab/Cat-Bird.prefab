@@ -5068,9 +5068,10 @@ MonoBehaviour:
   flashEffect: {fileID: 0}
   gridSpawner: {fileID: 0}
   respawnPoint: {fileID: 0}
+  softBlock: {fileID: 0}
   moveSpeed: 3.5
   airMoveSpeed: 5
-  jumpForce: 6.9
+  jumpForce: 8
   jumpBufferFrames: 1
   coyoteTime: 0.1
   maxAirJump: 0

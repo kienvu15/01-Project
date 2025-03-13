@@ -2083,7 +2083,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3782176318970581212, guid: 7b1f72be44841c847be12db03f9662f6, type: 3}
       propertyPath: jumpForce
-      value: 6.9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3782176318970581212, guid: 7b1f72be44841c847be12db03f9662f6, type: 3}
       propertyPath: flashEffect
