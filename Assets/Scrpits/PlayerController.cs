@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] AudioClip jumpSound;
+    
     private AudioSource audioSource;
     private PlayerController playerController;
     public FlashEffect flashEffect;
@@ -22,6 +22,10 @@ public class PlayerController : MonoBehaviour
     BoxCollider2D myFeetCollider;
     private float gravity;
     private bool isDead = false;
+    [Space(5)]
+
+    [Header("SoundEF")]
+    [SerializeField] AudioClip jumpSound;
     [Space(5)]
 
     [Header("Movement")]
@@ -248,17 +252,10 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            anim.SetBool("jump2", false);
             anim.SetBool("Jump", false);
             anim.SetBool("Fall", false);
             anim.SetBool("Dive", false);
         }
-    }
-
-    public void OnJumpComplete()
-    {
-        anim.ResetTrigger("Jump2");
-        anim.SetBool("jump2", false);
     }
 
     public void UpdateJumpVariales()
