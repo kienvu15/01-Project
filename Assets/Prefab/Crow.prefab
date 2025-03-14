@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6311851482232582294}
   - component: {fileID: 8315184835557898512}
   - component: {fileID: 5454239736501500292}
+  - component: {fileID: 6546042318368514145}
   m_Layer: 0
   m_Name: Crow
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 3216281095102189965}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.41, y: -3.21, z: 0}
+  m_LocalPosition: {x: 9.072968, y: -3.6819901, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -188,3 +189,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6614ed25e2bda8e4499474b45f48156d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flashEffect: {fileID: 6546042318368514145}
+--- !u!114 &6546042318368514145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3216281095102189965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebd2303f7dfc05640a135b54b4691d45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashImage: {fileID: 0}
+  flashDuration: 0.14
+  flashColor: {r: 1, g: 1, b: 1, a: 0.15686275}
+  fadeTime: 0.21

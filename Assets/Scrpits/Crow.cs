@@ -4,6 +4,7 @@ public class Crow : MonoBehaviour
 {
     Animator animator;
     CircleCollider2D CircleCollider2D;
+    public FlashEffect flashEffect;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,6 +22,7 @@ public class Crow : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             animator.Play("crow2");
+            StartCoroutine(flashEffect.StartFlash());
         }
     }
     public void CollDonr()
