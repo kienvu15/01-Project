@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cat-Bird-10-1024x576_0: 4004924887292602916
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
