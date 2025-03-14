@@ -7,14 +7,14 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] AudioClip jumpSound;
+    
     private AudioSource audioSource;
     private PlayerController playerController;
     public FlashEffect flashEffect;
     public GridSpawner gridSpawner;
     public Transform respawnPoint;
-    public SoftBlock softBlock;
-
+    public SoftBlock[] softBlocks;
+    public FallBrick FallBrick;
 
     Rigidbody2D rb;
     Animator anim;
@@ -22,6 +22,10 @@ public class PlayerController : MonoBehaviour
     BoxCollider2D myFeetCollider;
     private float gravity;
     private bool isDead = false;
+    [Space(5)]
+
+    [Header("SoundEF")]
+    [SerializeField] AudioClip jumpSound;
     [Space(5)]
 
     [Header("Movement")]
@@ -76,6 +80,10 @@ public class PlayerController : MonoBehaviour
         CheckVerticalState();
         UpdateJumpVariales();
         DustO();
+        if (isDead)
+        {
+            ResetSoftBlocks();
+        }
     }
     
     public void Move()
@@ -244,17 +252,10 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            anim.SetBool("jump2", false);
             anim.SetBool("Jump", false);
             anim.SetBool("Fall", false);
             anim.SetBool("Dive", false);
         }
-    }
-
-    public void OnJumpComplete()
-    {
-        anim.ResetTrigger("Jump2");
-        anim.SetBool("jump2", false);
     }
 
     public void UpdateJumpVariales()
@@ -301,6 +302,7 @@ public class PlayerController : MonoBehaviour
 
             Die();
         }
+        
     }
     
     private IEnumerator TeleportAfterFlash()
@@ -335,28 +337,35 @@ public class PlayerController : MonoBehaviour
         myBodyCollider.enabled = false;
         StartCoroutine(Respawn());
     }
-    
+
     private IEnumerator Respawn()
     {
         Camera.main.transform.position = new Vector3(respawnPoint.position.x, respawnPoint.position.y, Camera.main.transform.position.z);
 
-        
         yield return new WaitForSeconds(3f);
 
         Debug.Log("🔄 Respawning...");
         myBodyCollider.enabled = true;
         rb.bodyType = RigidbodyType2D.Dynamic;
-        
+
         // Đưa nhân vật về vị trí checkpoint
         transform.position = respawnPoint.position;
 
         // Reset trạng thái nhân vật
-        
         isDead = false;
         anim.SetBool("Die", false);
-
-        // Reset animation
         anim.Play("Idle");
+
+        // Reset các gạch rơi
+        FallBrick.ResetAllBricks();
+    }
+
+    void ResetSoftBlocks()
+    {
+        foreach (SoftBlock block in softBlocks)
+        {
+            block.ResetPlatform();
+        }
     }
 
 
