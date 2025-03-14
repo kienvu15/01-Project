@@ -5889,6 +5889,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1672816226010917826, guid: 54ec48c0f3af2134280a296cac034978, type: 3}
+      propertyPath: m_Size.y
+      value: 0.53268266
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672816226010917826, guid: 54ec48c0f3af2134280a296cac034978, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.02336584
+      objectReference: {fileID: 0}
     - target: {fileID: 6056240002412924739, guid: 54ec48c0f3af2134280a296cac034978, type: 3}
       propertyPath: m_Name
       value: Square (4)
@@ -11012,6 +11020,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1672816226010917826, guid: 54ec48c0f3af2134280a296cac034978, type: 3}
+      propertyPath: m_Size.y
+      value: 0.52600676
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672816226010917826, guid: 54ec48c0f3af2134280a296cac034978, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.03742045
+      objectReference: {fileID: 0}
     - target: {fileID: 6056240002412924739, guid: 54ec48c0f3af2134280a296cac034978, type: 3}
       propertyPath: m_Name
       value: Square (3)
