@@ -44,7 +44,7 @@ public class FallBrick : MonoBehaviour
         Instantiate(DustBlast2, point.position, Quaternion.identity);
         Instantiate(DustBlast2, point2.position, Quaternion.identity);
     }
-
+    
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
@@ -64,7 +64,8 @@ public class FallBrick : MonoBehaviour
         body.linearVelocity = Vector2.zero;
         body.angularVelocity = 0f;
         aware.SetActive (true);
-        
+        animator.enabled = true;
+        gameObject.SetActive(true);
     }
 
     // Reset tất cả các FallBrick
