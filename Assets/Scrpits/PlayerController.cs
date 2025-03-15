@@ -72,13 +72,13 @@ public class PlayerController : MonoBehaviour
         gravity = rb.gravityScale;
         audioSource = GetComponent<AudioSource>();
         playerController = GetComponent<PlayerController>();
-        rb.AddForce(new Vector2(0, 12f), ForceMode2D.Impulse);
+
+        rb.AddForce(new Vector2(0, 10f), ForceMode2D.Impulse);
         anim.Play("Appear");
         
     }
     public void WaitForAppearAnimation()
     {
-        
         anim.SetBool("Fall",true);
     }
 
