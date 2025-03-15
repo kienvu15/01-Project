@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Unity.Collections;
 using UnityEngine;
 
 public class Runenemy : MonoBehaviour
@@ -11,20 +12,33 @@ public class Runenemy : MonoBehaviour
 
     private Rigidbody2D rb;
     private Animator anim;
+    private CircleCollider2D circleCollider;
+    private BoxCollider2D boxCollider;
     private bool isAware = false;
     private bool isMoving = false;
     private bool isJumping = false;
     private bool isGrounded = false;
+    private bool die = false;
     private Vector2 moveDirection;
+
+    private Vector3 startPosition;
+    private Quaternion startRotation;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        circleCollider = GetComponent<CircleCollider2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
+
+        startPosition = transform.position;
+        startRotation = transform.rotation;
     }
 
     void Update()
     {
+       
+        
         // Kiểm tra Enemy có đang chạm đất không
         isGrounded = Physics2D.OverlapCircle(transform.position, 0.1f, groundLayer);
 
@@ -39,6 +53,28 @@ public class Runenemy : MonoBehaviour
         }
 
     }
+
+    public void ResetEnemy()
+    {
+        boxCollider.enabled = true;
+        circleCollider.enabled = true;
+        transform.position = startPosition;
+        transform.rotation = startRotation;
+
+        rb.linearVelocity = Vector2.zero;  // Dừng mọi di chuyển
+        rb.angularVelocity = 0f;      // Dừng mọi xoay
+        rb.simulated = true;          // Đảm bảo Rigidbody hoạt động lại
+        rb.gravityScale = 1f;         // Đặt lại trọng lực nếu bị thay đổi
+
+        isAware = false;
+        isMoving = false;
+        isJumping = false;
+        die = false;
+
+        anim.Play("Idle"); // Reset animation về trạng thái ban đầu
+        gameObject.SetActive(true); // Đảm bảo enemy được kích hoạt lại
+    }
+
 
     public void OnPlayerEnterAware()
     {
@@ -72,17 +108,38 @@ public class Runenemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        // Nếu chạm vào Water → Nhảy lên rồi chết
+        if (rb.IsTouchingLayers(LayerMask.GetMask("Water")))
+        {
+            rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+            anim.Play("Die");
+            die = true;
+            rb.linearVelocity = Vector2.zero; // Dừng di chuyển
+            boxCollider.enabled = false;
+            circleCollider.enabled = false;
+
+            Debug.Log("Enemy Died in Water...");
+            return;
+        }
+
         // Nếu Enemy đang chạy và chạm vào collider KHÔNG PHẢI Ground thì nhảy lên
         if (collision.gameObject.CompareTag("Box"))
         {
-
             rb.linearVelocity = new Vector2(-moveDirection.x * 2f, jumpForce);
             isMoving = false;
 
             anim.Play("Look");
+            
             Debug.Log("Enemy Jumping...");
             StartCoroutine(WaitForLookAnimation());
         }
+    }
+
+    
+
+    public void Destroyit()
+    {
+        gameObject.SetActive(false);
     }
 
     private IEnumerator WaitForLookAnimation()

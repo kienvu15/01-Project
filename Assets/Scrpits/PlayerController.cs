@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public GridSpawner gridSpawner;
     public Transform respawnPoint;
     public SoftBlock[] softBlocks;
+    public Runenemy[] enemies;
     public FallBrick FallBrick;
 
     Rigidbody2D rb;
@@ -380,7 +381,14 @@ public class PlayerController : MonoBehaviour
 
         // Reset các gạch rơi
         FallBrick.ResetAllBricks();
+
+        // Reset tất cả enemy về vị trí và trạng thái ban đầu
+        foreach (Runenemy enemy in enemies)
+        {
+            enemy.ResetEnemy();
+        }
     }
+
 
     void ResetSoftBlocks()
     {
