@@ -21,7 +21,11 @@ public class GameManagerOnLevel : MonoBehaviour
         pausePanel.SetActive(true); // Hiện menu pause
         pauseButton.gameObject.SetActive(false); // Ẩn nút pause
     }
-
+    public void RestartLevel()
+    {
+        Time.timeScale = 1f;  // Đảm bảo game không bị pause khi restart
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Load lại scene hiện tại
+    }
     public void ResumeGame()
     {
         isPaused = false;

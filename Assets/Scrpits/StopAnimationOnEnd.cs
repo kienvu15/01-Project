@@ -13,4 +13,8 @@ public class StopAnimationOnEnd : MonoBehaviour
     {
         anim.enabled = false;  // Dừng animation khi đến frame cuối
     }
+    public void Destroyit()
+    {
+        Destroy(gameObject);
+    }
 }

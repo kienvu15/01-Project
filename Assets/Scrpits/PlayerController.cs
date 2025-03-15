@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     
-    private AudioSource audioSource;
+    public AudioSource audioSource;
     private PlayerController playerController;
     public FlashEffect flashEffect;
     public GridSpawner gridSpawner;
@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("SoundEF")]
     [SerializeField] AudioClip jumpSound;
+    [SerializeField] AudioClip moveSound;
     [Space(5)]
 
     [Header("Movement")]
@@ -33,6 +34,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float airMoveSpeed = 5f;
     private float moveX;
     private bool isFacingRight = true;
+    public float footstepInterval = 0.3f; // Thời gian giữa mỗi bước chân
+    private float footstepTimer;
     [Space(5)]
 
     [Header("Jump")]
@@ -68,11 +71,19 @@ public class PlayerController : MonoBehaviour
         gravity = rb.gravityScale;
         audioSource = GetComponent<AudioSource>();
         playerController = GetComponent<PlayerController>();
+        rb.AddForce(new Vector2(0, 12f), ForceMode2D.Impulse);
+        anim.Play("Appear");
+        
+    }
+    public void WaitForAppearAnimation()
+    {
+        
+        anim.SetBool("Fall",true);
     }
 
-    
     void Update()
     {
+        
         Grounded();
         Move();
         Glide();
@@ -85,19 +96,47 @@ public class PlayerController : MonoBehaviour
             ResetSoftBlocks();
         }
     }
-    
+    private bool Grounded()
+    {
+        bool grounded = myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"));
+
+        if (grounded)
+        {
+            isGround = true;
+            isDoublejump = false;
+        }
+        else
+        {
+            isGround = false;
+        }
+
+        return grounded;
+    }
     public void Move()
     {
-        if(isDead == true) return;
+        if (isDead) return;
+
         moveX = Input.GetAxisRaw("Horizontal");
         float currentSpeed = isGround ? moveSpeed : airMoveSpeed;
         Vector2 movement = new Vector2(moveX * currentSpeed, rb.linearVelocity.y);
         rb.linearVelocity = movement;
+
         anim.SetBool("isRunning", moveX != 0);
+
         if ((moveX > 0 && !isFacingRight) || (moveX < 0 && isFacingRight))
         {
             Flip();
-        }  
+        }
+
+        // Giảm footstepTimer theo thời gian
+        footstepTimer -= Time.deltaTime;
+
+        // Kiểm tra nếu đang chạy trên mặt đất và timer đã hết
+        if (isGround && moveX != 0 && footstepTimer <= 0)
+        {
+            audioSource.PlayOneShot(moveSound);
+            footstepTimer = footstepInterval; // Reset timer
+        }
     }
     public void DustO()
     {
@@ -145,23 +184,6 @@ public class PlayerController : MonoBehaviour
             rb.gravityScale = gravity;
             anim.SetBool("Dive", false);
         }
-    }
-
-    private bool Grounded()
-    {
-        bool grounded = myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"));
-
-        if (grounded)
-        {
-            isGround = true;
-            isDoublejump = false;
-        }
-        else
-        {
-            isGround = false;
-        }
-
-        return grounded;
     }
 
     void Flip()
