@@ -5,6 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c297d734-de11-44a7-b3c3-4cd552477e78" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Finish-Portal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Finish-Portal.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Runenemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Runenemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 02.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 02.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/level11.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/level11.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SeeAwake.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SeeAwake.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +35,8 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/fleck/Videos/01-Project/Assets/Key.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/fleck/Videos/01-Project/Assets/Scenes/Level01.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/fleck/Videos/01-Project/Assets/Scenes/Level01.unity" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -42,7 +48,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.30f1\Editor\Unity.exe" />
