@@ -4,10 +4,12 @@ public class Spring : MonoBehaviour
 {
     [SerializeField] private float force = 15f; // Lực nảy có thể tùy chỉnh
     private Animator anim;
-
+    public AudioSource audioSource;
+    [SerializeField] AudioClip jumpSound;
     private void Start()
     {
         anim = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -22,6 +24,12 @@ public class Spring : MonoBehaviour
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0); // Reset vận tốc trước khi nhảy
                 rb.AddForce(Vector2.up * force, ForceMode2D.Impulse);
+            }
+
+            // Phát âm thanh
+            if (audioSource != null && jumpSound != null)
+            {
+                audioSource.PlayOneShot(jumpSound);
             }
         }
     }

@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c297d734-de11-44a7-b3c3-4cd552477e78" name="Changes" comment="" />
+    <list default="true" id="c297d734-de11-44a7-b3c3-4cd552477e78" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Object/Spring.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Object/Spring.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Object/Spring.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Object/Spring.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/level11.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/level11.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scrpits/Spring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scrpits/Spring.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiled/level11.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiled/level11.tmx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,7 +51,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "#2 on main",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -380,6 +386,6 @@
     <MESSAGE value="Chain Saw" />
     <MESSAGE value="Fall Plaform" />
     <MESSAGE value="F1" />
-    <option name="LAST_COMMIT_MESSAGE" value="F1" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>
