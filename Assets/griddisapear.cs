@@ -17,6 +17,9 @@ public class griddisapear : MonoBehaviour
     private GameObject[,] gridObjects;
     public static bool canPlay = false;
 
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip startSound;
+
     void Start()
     {
         SpawnGridInstantly();
@@ -42,7 +45,11 @@ public class griddisapear : MonoBehaviour
 
     IEnumerator PlayGridAnimation()
     {
-        
+
+        if (audioSource != null && startSound != null)
+        {
+            audioSource.PlayOneShot(startSound);
+        }
 
         for (int y = 0; y < rows; y++)
         {

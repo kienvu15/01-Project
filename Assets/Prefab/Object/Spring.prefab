@@ -248,7 +248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 11.4
   audioSource: {fileID: 2999982310427578031}
-  jumpSound: {fileID: 8300000, guid: 8284f50e445a2d24c95436609b9fa3c2, type: 3}
+  jumpSound: {fileID: 8300000, guid: 5d95739ad81a19544942fcdaa6f07b93, type: 3}
 --- !u!82 &2999982310427578031
 AudioSource:
   m_ObjectHideFlags: 0

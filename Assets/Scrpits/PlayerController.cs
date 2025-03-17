@@ -215,6 +215,7 @@ public class PlayerController : MonoBehaviour
                 isDoublejump = false;
                 airjumpCount = 0;
                 Instantiate(DustBlast, Foot.position, Quaternion.Euler(0, 0, 90));
+                audioSource.PlayOneShot(jumpSound);
             }
             else if (!Grounded() && airjumpCount < maxAirJump && Input.GetKeyDown(KeyCode.Space))
             {
