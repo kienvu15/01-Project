@@ -57,8 +57,5 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: 1
-    uniqueID: 324800077
-    locked: 0
   m_RenderingLayers:
   - Default
