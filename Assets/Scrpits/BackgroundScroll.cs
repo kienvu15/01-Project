@@ -9,7 +9,7 @@ public class BackgroundScroll : MonoBehaviour
     [SerializeField] private float x, y;
     void Start()
     {
- 
+
     }
 
     void Update()
@@ -17,6 +17,6 @@ public class BackgroundScroll : MonoBehaviour
         _img.uvRect = new Rect(_img.uvRect.position + new Vector2(x, y) * Time.deltaTime, _img.uvRect.size);
     }
 
-    
-    
+
+
 }
