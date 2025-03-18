@@ -97,6 +97,7 @@ public class PlayerController : MonoBehaviour
             ResetSoftBlocks();
         }
     }
+
     private bool Grounded()
     {
         bool grounded = myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"));
@@ -365,12 +366,12 @@ public class PlayerController : MonoBehaviour
     private IEnumerator Respawn()
     {
         Camera.main.transform.position = new Vector3(respawnPoint.position.x, respawnPoint.position.y, Camera.main.transform.position.z);
-
+        rb.bodyType = RigidbodyType2D.Dynamic;
         yield return new WaitForSeconds(3f);
 
         Debug.Log("🔄 Respawning...");
         myBodyCollider.enabled = true;
-        rb.bodyType = RigidbodyType2D.Dynamic;
+        
 
         // Đưa nhân vật về vị trí checkpoint
         transform.position = respawnPoint.position;
