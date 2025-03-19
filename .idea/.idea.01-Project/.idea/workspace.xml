@@ -5,31 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c297d734-de11-44a7-b3c3-4cd552477e78" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.01-Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.01-Project/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefab/Cat-Bird.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Cat-Bird.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 01.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Win.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Win.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/level02.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/level02.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/level03.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/level03.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/level11.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/level11.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scrpits/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scrpits/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scrpits/StopAnimationOnEnd.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scrpits/StopAnimationOnEnd.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scrpits/griddisapear.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scrpits/griddisapear.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Button/0bgsprite-298-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Button/0bgsprite-298-0.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Button/sprite-1124-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Button/sprite-1124-0.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Button/sprite-311-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Button/sprite-311-0.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Items/sprite-1037-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Items/sprite-1037-0.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Items/sprite-1157-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Items/sprite-1157-0.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Items/sprite-1159-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Items/sprite-1159-0.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Items/sprite-321-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Items/sprite-321-0.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Items/sprite-325-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Items/sprite-325-0.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Items/sprite-659-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Items/sprite-659-0.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/sprite-1045-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/sprite-1045-0.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/sprite-68-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/sprite-68-0.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/sprite-759-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/sprite-759-0.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/sprite-784-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/sprite-784-0.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprte/background-429-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/background-429-0.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.sequences/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.sequences/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="main" />
+    <option name="BRANCH" value="vandai" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,19 +25,16 @@
     &quot;assignee&quot;: &quot;kienvu15&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/kienvu15/01-Project.git",
-    "accountId": "07189253-bf84-4398-bc88-16a0b890d092"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/kienvu15/01-Project.git&quot;,
+    &quot;accountId&quot;: &quot;2676c1ba-94c8-4ead-88fc-389f6f1a8909&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://C:/Users/fleck/Videos/01-Project/Assets/Key.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 8
@@ -74,7 +48,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;vandai&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -150,7 +124,6 @@
       <workItem from="1741841150000" duration="126000" />
       <workItem from="1741848012347" duration="431000" />
       <workItem from="1741850049443" duration="8000" />
-      <workItem from="1742375382676" duration="1922000" />
     </task>
     <task id="LOCAL-00001" summary="comment tesst">
       <option name="closed" value="true" />
@@ -377,7 +350,6 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityProjectDiscoverer">
-    <option name="hasUnityReference" value="true" />
     <option name="unityProject" value="true" />
     <option name="unityProjectFolder" value="true" />
   </component>
