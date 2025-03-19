@@ -75,10 +75,11 @@ public class PlayerController : MonoBehaviour
 
         rb.AddForce(new Vector2(0, 10f), ForceMode2D.Impulse);
         anim.Play("Appear");
-        
+        StartCoroutine(flashEffect.StartFlash());
     }
     public void WaitForAppearAnimation()
     {
+        
         anim.SetBool("Fall",true);
     }
 

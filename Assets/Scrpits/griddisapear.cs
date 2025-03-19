@@ -52,7 +52,7 @@ public class griddisapear : MonoBehaviour
             audioSource.PlayOneShot(startSound);
         }
 
-        yield return StartCoroutine(flashEffect.StartFlash());
+        
 
         for (int y = 0; y < rows; y++)
         {
@@ -69,8 +69,7 @@ public class griddisapear : MonoBehaviour
             }
             yield return new WaitForSeconds(rowDelay);
         }
-
-        
+        yield return StartCoroutine(flashEffect.StartFlash());
 
         canPlay = true;
     }
