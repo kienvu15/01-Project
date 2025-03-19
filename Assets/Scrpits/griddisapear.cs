@@ -24,6 +24,7 @@ public class griddisapear : MonoBehaviour
     {
         SpawnGridInstantly();
         StartCoroutine(PlayGridAnimation());
+        
         canPlay = false;
     }
 
@@ -51,6 +52,8 @@ public class griddisapear : MonoBehaviour
             audioSource.PlayOneShot(startSound);
         }
 
+        yield return StartCoroutine(flashEffect.StartFlash());
+
         for (int y = 0; y < rows; y++)
         {
             for (int x = 0; x < columns; x++)
@@ -67,7 +70,7 @@ public class griddisapear : MonoBehaviour
             yield return new WaitForSeconds(rowDelay);
         }
 
-        yield return StartCoroutine(flashEffect.StartFlash());
+        
 
         canPlay = true;
     }
