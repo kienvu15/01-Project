@@ -141,9 +141,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
+        y: 32
         width: 19
-        height: 22
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,9 +163,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 19
-        y: 15
+        y: 32
         width: 19
-        height: 17
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,10 +184,10 @@ TextureImporter:
       name: sprite-695-4_2
       rect:
         serializedVersion: 2
-        x: 20
-        y: 31
-        width: 17
-        height: 10
+        x: 38
+        y: 32
+        width: 19
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,10 +206,10 @@ TextureImporter:
       name: sprite-695-4_3
       rect:
         serializedVersion: 2
-        x: 39
-        y: 31
-        width: 17
-        height: 15
+        x: 57
+        y: 32
+        width: 19
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,9 +228,9 @@ TextureImporter:
       name: sprite-695-4_4
       rect:
         serializedVersion: 2
-        x: 56
-        y: 32
-        width: 20
+        x: 0
+        y: 16
+        width: 19
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -250,8 +250,8 @@ TextureImporter:
       name: sprite-695-4_5
       rect:
         serializedVersion: 2
-        x: 38
-        y: 15
+        x: 19
+        y: 16
         width: 19
         height: 16
       alignment: 0
@@ -272,10 +272,10 @@ TextureImporter:
       name: sprite-695-4_6
       rect:
         serializedVersion: 2
-        x: 57
-        y: 15
+        x: 38
+        y: 16
         width: 19
-        height: 14
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,10 +294,10 @@ TextureImporter:
       name: sprite-695-4_7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 57
+        y: 16
         width: 19
-        height: 13
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -316,10 +316,10 @@ TextureImporter:
       name: sprite-695-4_8
       rect:
         serializedVersion: 2
-        x: 19
+        x: 0
         y: 0
         width: 19
-        height: 14
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -334,11 +334,33 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: sprite-695-4_9
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 0
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 251eb8363af81ef439357380fc593131
+      internalID: -1553344159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b3865edd0edd49a43aee5d439be10a2d
     internalID: 0
     vertices: []
     indices: 
@@ -357,6 +379,7 @@ TextureImporter:
       sprite-695-4_6: -483757194281899807
       sprite-695-4_7: -5891092556278090920
       sprite-695-4_8: 2723110829591388995
+      sprite-695-4_9: -1553344159
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
