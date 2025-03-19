@@ -21,7 +21,7 @@ public class griddisapear : MonoBehaviour
     [SerializeField] private AudioClip startSound;
 
     void Start()
-    {
+    { 
         SpawnGridInstantly();
         StartCoroutine(PlayGridAnimation());
         canPlay = false;

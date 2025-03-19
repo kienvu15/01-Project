@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
 
     Rigidbody2D rb;
     Animator anim;
-    BoxCollider2D myBodyCollider;
+    
     BoxCollider2D myFeetCollider;
     private float gravity;
     private bool isDead = false;
@@ -67,19 +67,20 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        myBodyCollider = GetComponent<BoxCollider2D>();
+        
         myFeetCollider = GetComponent<BoxCollider2D>();
         gravity = rb.gravityScale;
         audioSource = GetComponent<AudioSource>();
         playerController = GetComponent<PlayerController>();
 
         rb.AddForce(new Vector2(0, 10f), ForceMode2D.Impulse);
-        anim.Play("Appear");
+        
         
     }
     public void WaitForAppearAnimation()
     {
         anim.SetBool("Fall",true);
+
     }
 
     void Update()
@@ -359,7 +360,7 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("💀 Player Died!");
         rb.AddForce(new Vector2(0, 15f), ForceMode2D.Impulse);
-        myBodyCollider.enabled = false;
+        myFeetCollider.enabled = false;
         StartCoroutine(Respawn());
     }
 
@@ -370,7 +371,7 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(3f);
 
         Debug.Log("🔄 Respawning...");
-        myBodyCollider.enabled = true;
+        myFeetCollider.enabled = true;
         
 
         // Đưa nhân vật về vị trí checkpoint
