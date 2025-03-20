@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d5c90429-d6a9-4bdc-b47e-9cd7b0a8d62b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 01.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 01.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level01.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level01.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scrpits/StopAnimationOnEnd.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scrpits/StopAnimationOnEnd.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Button/0bgsprite-298-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Button/0bgsprite-298-0.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Button/sprite-1124-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Button/sprite-1124-0.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Button/sprite-311-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Button/sprite-311-0.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Items/sprite-1037-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Items/sprite-1037-0.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Items/sprite-1157-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Items/sprite-1157-0.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Items/sprite-1159-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Items/sprite-1159-0.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Items/sprite-321-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Items/sprite-321-0.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Items/sprite-325-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Items/sprite-325-0.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Items/sprite-659-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Items/sprite-659-0.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/sprite-1045-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/sprite-1045-0.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/sprite-68-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/sprite-68-0.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/sprite-759-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/sprite-759-0.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/sprite-784-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/sprite-784-0.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprte/background-429-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/background-429-0.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/sprite-307-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/sprite-307-1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.sequences/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.sequences/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/vandai" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "xuandai0229"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/kienvu15/01-Project.git",
+    "accountId": "07189253-bf84-4398-bc88-16a0b890d092"
+  }
+}]]></component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2uX59Odrs5cx79C9Q6QKOHDjO1Q" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "vandai",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d5c90429-d6a9-4bdc-b47e-9cd7b0a8d62b" name="Changes" comment="" />
+      <created>1742381927935</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1742381927935</updated>
+      <workItem from="1742381930396" duration="663000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityProjectDiscoverer">
+    <option name="unityProjectFolder" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
