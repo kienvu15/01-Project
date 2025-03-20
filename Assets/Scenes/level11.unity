@@ -1951,14 +1951,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc08ee22eb4abc544b4c9059a6f03035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 1088868620}
+  panel: {fileID: 6331734987227641361}
   objectPrefab: {fileID: 7954744453411052587, guid: 5c9c57c5a2e08b64fb209cfe65203eee, type: 3}
-  columns: 14
+  columns: 15
   rows: 7
   spacing: 1.45
-  rowDelay: 0.67
   spawnOrigin: {fileID: 527772848}
-  flashEffect: {fileID: 0}
+  flashEffect: {fileID: 527772847}
   animationName: OpenTransition
   audioSource: {fileID: 527772849}
   startSound: {fileID: 8300000, guid: 5771ee0ea356f0b4ba85011f82ae85d1, type: 3}
@@ -6271,7 +6270,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &362804992271905776
 RectTransform:
   m_ObjectHideFlags: 0

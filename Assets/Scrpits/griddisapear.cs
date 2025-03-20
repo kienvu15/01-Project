@@ -1,15 +1,13 @@
 ﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class griddisapear : MonoBehaviour
 {
     public GameObject panel;
-    public GameObject objectPrefab; //OpenTransition
+    public GameObject objectPrefab; // OpenTransition
     public int columns = 15;
     public int rows = 7;
     public float spacing = 1.45f;
-    public float rowDelay = 0.16f;
     public Transform spawnOrigin;
     public FlashEffect flashEffect;
     public string animationName = "OpenTransition"; // Tên animation trong Animator
@@ -24,7 +22,7 @@ public class griddisapear : MonoBehaviour
     {
         SpawnGridInstantly();
         StartCoroutine(PlayGridAnimation());
-        
+
         canPlay = false;
     }
 
@@ -46,13 +44,12 @@ public class griddisapear : MonoBehaviour
 
     IEnumerator PlayGridAnimation()
     {
-
         if (audioSource != null && startSound != null)
         {
             audioSource.PlayOneShot(startSound);
         }
 
-        
+        float animationDuration = 0f;
 
         for (int y = 0; y < rows; y++)
         {
@@ -60,17 +57,44 @@ public class griddisapear : MonoBehaviour
             {
                 GameObject obj = gridObjects[y, x];
 
-                // Bật animation cho từng object
                 Animator anim = obj.GetComponent<Animator>();
                 if (anim != null)
                 {
                     anim.Play(animationName);
+
+                    // Lấy thời gian animation dài nhất
+                    AnimationClip clip = anim.runtimeAnimatorController.animationClips[0];
+                    if (clip.length > animationDuration)
+                    {
+                        animationDuration = clip.length;
+                    }
                 }
             }
-            yield return new WaitForSeconds(rowDelay);
         }
+
+        // Đợi cho đến khi tất cả animation kết thúc
+        yield return new WaitForSeconds(animationDuration);
+
+        // Kích hoạt hiệu ứng Flash ngay lập tức khi animation kết thúc
         yield return StartCoroutine(flashEffect.StartFlash());
 
+        // XÓA TẤT CẢ OBJECT SAU KHI FLASH KẾT THÚC
+        ClearGrid();
+
         canPlay = true;
+    }
+
+    void ClearGrid()
+    {
+        for (int y = 0; y < rows; y++)
+        {
+            for (int x = 0; x < columns; x++)
+            {
+                if (gridObjects[y, x] != null)
+                {
+                    Destroy(gridObjects[y, x]);
+                }
+            }
+        }
     }
 }
