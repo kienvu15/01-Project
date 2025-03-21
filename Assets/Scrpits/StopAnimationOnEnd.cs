@@ -15,6 +15,6 @@ public class StopAnimationOnEnd : MonoBehaviour
     }
     public void Destroyit()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }

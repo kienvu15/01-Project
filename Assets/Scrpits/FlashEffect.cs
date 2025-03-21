@@ -16,6 +16,8 @@ public class FlashEffect : MonoBehaviour
 
     public IEnumerator StartFlash()
     {
+        Debug.Log("🌟 StartFlash() đã được gọi!");
+
         if (flashImage == null) yield break;
 
         flashImage.enabled = true;
