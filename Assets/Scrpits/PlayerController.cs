@@ -413,9 +413,7 @@ public class PlayerController : MonoBehaviour
 
         // Reset các gạch rơi
         FallBrick.ResetAllBricks();
-        
-
-
+       
         foreach (PLboss boss in bosses)
         {
             boss.ResetBoss(); // Reset từng Boss
