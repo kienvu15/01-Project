@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -15,7 +16,11 @@ public class PlayerController : MonoBehaviour
     public Transform respawnPoint;
     public SoftBlock[] softBlocks;
     public Runenemy[] enemies;
+    public PLboss[] bosses;
+    public BossJump BossJump;
+
     public FallBrick FallBrick;
+    
 
     Rigidbody2D rb;
     Animator anim;
@@ -58,9 +63,10 @@ public class PlayerController : MonoBehaviour
     public ParticleSystem dust;
     public Transform Foot;
     public GameObject DustBlast;
-    
 
-    
+    public TextMeshProUGUI deathCounterText;
+    private int deathCount=0;
+
 
 
     void Start()
@@ -76,7 +82,19 @@ public class PlayerController : MonoBehaviour
         rb.AddForce(new Vector2(0, 10f), ForceMode2D.Impulse);
         anim.Play("Appear");
         //StartCoroutine(flashEffect.StartFlash());
+
+        deathCount = PlayerPrefs.GetInt("DeathCount", 0);
+        UpdateDeathUI();
     }
+
+    void UpdateDeathUI()
+    {
+        if (deathCounterText != null)
+        {
+            deathCounterText.text = "" + deathCount;
+        }
+    }
+
     public void WaitForAppearAnimation()
     {
         
@@ -366,6 +384,11 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator Respawn()
     {
+        deathCount++;
+        PlayerPrefs.SetInt("DeathCount", deathCount);
+        PlayerPrefs.Save();
+        UpdateDeathUI();
+
         Camera.main.transform.position = new Vector3(respawnPoint.position.x, respawnPoint.position.y, Camera.main.transform.position.z);
         rb.bodyType = RigidbodyType2D.Dynamic;
         yield return new WaitForSeconds(3f);
@@ -384,12 +407,20 @@ public class PlayerController : MonoBehaviour
 
         // Reset các gạch rơi
         FallBrick.ResetAllBricks();
+        BossJump.ResetBoss();
+
+
+        foreach (PLboss boss in bosses)
+        {
+            boss.ResetBoss(); // Reset từng Boss
+        }
 
         // Reset tất cả enemy về vị trí và trạng thái ban đầu
         foreach (Runenemy enemy in enemies)
         {
             enemy.ResetEnemy();
         }
+
     }
 
 
