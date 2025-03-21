@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
 
     public TextMeshProUGUI deathCounterText;
     private int deathCount=0;
-
+    public float appearForce;
 
 
     void Start()
@@ -79,12 +79,17 @@ public class PlayerController : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         playerController = GetComponent<PlayerController>();
 
-        rb.AddForce(new Vector2(0, 10f), ForceMode2D.Impulse);
-        anim.Play("Appear");
-        //StartCoroutine(flashEffect.StartFlash());
-
+        StartCoroutine(Appear());
+    
         deathCount = PlayerPrefs.GetInt("DeathCount", 0);
         UpdateDeathUI();
+    }
+
+    public IEnumerator Appear()
+    {
+        yield return new WaitForSeconds(0.3f);
+        rb.AddForce(new Vector2(0, appearForce), ForceMode2D.Impulse);
+        anim.Play("Appear");   
     }
 
     void UpdateDeathUI()
@@ -174,6 +179,7 @@ public class PlayerController : MonoBehaviour
     void Glide()
     {
         if (isDead == true) return;
+
         if (jumping)
         {
             if (Input.GetKey(KeyCode.Space))
@@ -187,12 +193,15 @@ public class PlayerController : MonoBehaviour
                 anim.SetBool("Dive", false);
             }
         }
-        if (!isGround && rb.linearVelocity.y < 0)
+
+        if (rb.linearVelocity.y < 0)
         {
+            
             if (Input.GetKey(KeyCode.Space))
             {
                 rb.gravityScale = glideGravityScale;
                 anim.SetBool("Dive", true);
+                Debug.Log("Guide while fall");
             }
             else
             {
@@ -373,7 +382,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
     private void Die()
     {
         Debug.Log("💀 Player Died!");
@@ -390,13 +398,11 @@ public class PlayerController : MonoBehaviour
         UpdateDeathUI();
 
         Camera.main.transform.position = new Vector3(respawnPoint.position.x, respawnPoint.position.y, Camera.main.transform.position.z);
-        rb.bodyType = RigidbodyType2D.Dynamic;
         yield return new WaitForSeconds(3f);
-
-        Debug.Log("🔄 Respawning...");
+        rb.bodyType = RigidbodyType2D.Dynamic;
         myBodyCollider.enabled = true;
-        
-
+        yield return new WaitForSeconds(0.5f);
+        Debug.Log("🔄 Respawning...");
         // Đưa nhân vật về vị trí checkpoint
         transform.position = respawnPoint.position;
 
@@ -407,7 +413,7 @@ public class PlayerController : MonoBehaviour
 
         // Reset các gạch rơi
         FallBrick.ResetAllBricks();
-        BossJump.ResetBoss();
+        
 
 
         foreach (PLboss boss in bosses)
@@ -421,6 +427,7 @@ public class PlayerController : MonoBehaviour
             enemy.ResetEnemy();
         }
 
+        BossJump.ResetBoss();
     }
 
 
