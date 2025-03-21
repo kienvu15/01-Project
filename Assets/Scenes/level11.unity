@@ -1997,7 +1997,7 @@ MonoBehaviour:
   rowDelay: 0.16
   spawnOrigin: {fileID: 527772848}
   flashEffect: {fileID: 527772847}
-  nextSceneName: Win
+  nextSceneName: Level 01
 --- !u!114 &527772847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5124,7 +5124,7 @@ Transform:
   m_GameObject: {fileID: 1541821155}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6, y: 3.84, z: -10}
+  m_LocalPosition: {x: 0.95, y: 3.69, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15160,6 +15160,8 @@ MonoBehaviour:
   enemies:
   - {fileID: 3179235091476264083}
   - {fileID: 3179235092530917879}
+  bosses: []
+  BossJump: {fileID: 0}
   FallBrick: {fileID: 0}
   jumpSound: {fileID: 8300000, guid: e01a51aa95832914badcea87b283ff90, type: 3}
   moveSound: {fileID: 8300000, guid: 7c5f272a3e02af8429e7c4dfc34d39c8, type: 3}
@@ -15176,6 +15178,7 @@ MonoBehaviour:
   dust: {fileID: 2762399666953844079}
   Foot: {fileID: 8340184818316704835}
   DustBlast: {fileID: 799534743160302347, guid: 839ef99a179d1ea49b113f38fd735700, type: 3}
+  deathCounterText: {fileID: 191770217610034237}
   isDoublejump: 0
 --- !u!82 &9041934619932141826
 AudioSource:
