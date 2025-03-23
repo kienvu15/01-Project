@@ -68,6 +68,7 @@ public class PlayerController : MonoBehaviour
     private int deathCount=0;
     public float appearForce;
 
+    public int collectedItems = 0;
 
     void Start()
     {
@@ -355,7 +356,13 @@ public class PlayerController : MonoBehaviour
 
             Die();
         }
-        
+        if (collision.CompareTag("Item"))
+        {
+            collectedItems++;
+            PlayerPrefs.SetInt("CollectedItems", collectedItems);
+            PlayerPrefs.Save(); 
+        }
+
     }
     
     private IEnumerator TeleportAfterFlash()

@@ -2458,8 +2458,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1447836033}
   muteButton: {fileID: 1616067943}
-  soundOnIcon: {fileID: 2488193864150925076, guid: 232de5c0ee6a4a843bc817632b3354cd, type: 3}
-  soundOffIcon: {fileID: 8624467571274655030, guid: c10aa06f16e6a624d97a8e35ad547f1f, type: 3}
+  soundOnIcon: {fileID: -6248192566103420328, guid: f262eac7d96985e4598684b2a42a318f, type: 3}
+  soundOffIcon: {fileID: 5045363977512708458, guid: e2b5380e47a389a409b68a451b70fb14, type: 3}
 --- !u!1 &1598115014
 GameObject:
   m_ObjectHideFlags: 0
@@ -2711,7 +2711,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2488193864150925076, guid: 232de5c0ee6a4a843bc817632b3354cd, type: 3}
+  m_Sprite: {fileID: -6248192566103420328, guid: f262eac7d96985e4598684b2a42a318f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3175,8 +3175,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 681, y: 386}
-  m_SizeDelta: {x: 134.4, y: 125.8}
+  m_AnchoredPosition: {x: 705.4, y: 381.06}
+  m_SizeDelta: {x: 121.07, y: 114.26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1963567881
 MonoBehaviour:
@@ -3242,7 +3242,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7886631795410796208, guid: 9da018ddfe6497b47b76736fce0363d0, type: 3}
+  m_Sprite: {fileID: -6605725420508660604, guid: ef03981e19c9be24b990e7b9a408ba99, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
