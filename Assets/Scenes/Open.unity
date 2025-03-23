@@ -1711,9 +1711,8 @@ MonoBehaviour:
   columns: 15
   rows: 7
   spacing: 1.45
-  rowDelay: 0.67
   spawnOrigin: {fileID: 976980519}
-  flashEffect: {fileID: 976980518}
+  flashEffect: {fileID: 0}
   animationName: OpenTransition
   audioSource: {fileID: 976980512}
   startSound: {fileID: 8300000, guid: 4193c2a57768e7d4d9373dc40ba48363, type: 3}
