@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5c90429-d6a9-4bdc-b47e-9cd7b0a8d62b" name="Changes" comment="" />
+    <list default="true" id="d5c90429-d6a9-4bdc-b47e-9cd7b0a8d62b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +48,10 @@
     &quot;accountId&quot;: &quot;07189253-bf84-4398-bc88-16a0b890d092&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://D:/duan1/Assets/Scenes/Level 01.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/duan1/Assets/Scenes/Level 01.unity" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -79,6 +85,7 @@
       <updated>1742381927935</updated>
       <workItem from="1742381930396" duration="663000" />
       <workItem from="1742481302137" duration="727000" />
+      <workItem from="1742549427238" duration="1257000" />
     </task>
     <task id="LOCAL-00001" summary="capnhap">
       <option name="closed" value="true" />
@@ -98,6 +105,17 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityProjectDiscoverer">
     <option name="unityProjectFolder" value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
