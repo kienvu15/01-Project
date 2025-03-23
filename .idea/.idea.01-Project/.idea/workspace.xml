@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c297d734-de11-44a7-b3c3-4cd552477e78" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scrpits/griddisapear.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scrpits/griddisapear.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scrpits/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scrpits/PlayerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,6 +124,7 @@
       <workItem from="1741848012347" duration="431000" />
       <workItem from="1741850049443" duration="8000" />
       <workItem from="1742379889687" duration="52000" />
+      <workItem from="1742549538036" duration="1380000" />
     </task>
     <task id="LOCAL-00001" summary="comment tesst">
       <option name="closed" value="true" />
