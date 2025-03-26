@@ -2408,7 +2408,7 @@ MonoBehaviour:
   rowDelay: 0.16
   spawnOrigin: {fileID: 296623642}
   flashEffect: {fileID: 296623648}
-  nextSceneName: level07
+  nextSceneName: level09
 --- !u!4 &296623642
 Transform:
   m_ObjectHideFlags: 0

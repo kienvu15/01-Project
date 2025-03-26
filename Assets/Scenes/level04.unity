@@ -360,7 +360,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 790631147}
         m_TargetAssemblyTypeName: GameManagerOnLevel, Assembly-CSharp
         m_MethodName: RestartLevel
         m_Mode: 1
@@ -1884,7 +1884,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 790631147}
         m_TargetAssemblyTypeName: GameManagerOnLevel, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
@@ -2598,7 +2598,7 @@ MonoBehaviour:
   rowDelay: 0.16
   spawnOrigin: {fileID: 790631142}
   flashEffect: {fileID: 790631148}
-  nextSceneName: Win
+  nextSceneName: level05
 --- !u!4 &790631142
 Transform:
   m_ObjectHideFlags: 0
@@ -8258,7 +8258,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 790631146}
         m_TargetAssemblyTypeName: SoundLevel, Assembly-CSharp
         m_MethodName: ToggleSound
         m_Mode: 1
@@ -8475,7 +8475,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 790631147}
         m_TargetAssemblyTypeName: GameManagerOnLevel, Assembly-CSharp
         m_MethodName: GoToMenu
         m_Mode: 1
@@ -8765,6 +8765,8 @@ MonoBehaviour:
   Foot: {fileID: 1605677438}
   DustBlast: {fileID: 799534743160302347, guid: 839ef99a179d1ea49b113f38fd735700, type: 3}
   deathCounterText: {fileID: 0}
+  appearForce: 0
+  collectedItems: 0
   isDoublejump: 0
 --- !u!61 &1464420359
 BoxCollider2D:
@@ -14700,7 +14702,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 790631147}
         m_TargetAssemblyTypeName: GameManagerOnLevel, Assembly-CSharp
         m_MethodName: PauseGame
         m_Mode: 1

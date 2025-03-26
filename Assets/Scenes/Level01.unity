@@ -337,7 +337,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1005822986}
         m_TargetAssemblyTypeName: GameManagerOnLevel, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
@@ -4729,7 +4729,7 @@ MonoBehaviour:
   rowDelay: 0.16
   spawnOrigin: {fileID: 1005822981}
   flashEffect: {fileID: 1005822988}
-  nextSceneName: Win
+  nextSceneName: level02
 --- !u!114 &1005822988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4909,7 +4909,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1005822986}
         m_TargetAssemblyTypeName: GameManagerOnLevel, Assembly-CSharp
         m_MethodName: GoToMenu
         m_Mode: 1
@@ -6067,7 +6067,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1005822986}
         m_TargetAssemblyTypeName: GameManagerOnLevel, Assembly-CSharp
         m_MethodName: RestartLevel
         m_Mode: 1
@@ -6757,7 +6757,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1005822986}
         m_TargetAssemblyTypeName: GameManagerOnLevel, Assembly-CSharp
         m_MethodName: PauseGame
         m_Mode: 1
@@ -12056,7 +12056,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1005822985}
         m_TargetAssemblyTypeName: SoundLevel, Assembly-CSharp
         m_MethodName: ToggleSound
         m_Mode: 1
