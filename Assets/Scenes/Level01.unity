@@ -6429,6 +6429,8 @@ MonoBehaviour:
   Foot: {fileID: 389631510}
   DustBlast: {fileID: 799534743160302347, guid: 839ef99a179d1ea49b113f38fd735700, type: 3}
   deathCounterText: {fileID: 0}
+  appearForce: 0
+  collectedItems: 0
   isDoublejump: 0
 --- !u!61 &1205922463
 BoxCollider2D:
@@ -6589,7 +6591,7 @@ Transform:
   m_GameObject: {fileID: 1205922460}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.85, y: -4.02, z: 0}
+  m_LocalPosition: {x: -6.68, y: -4.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7099,7 +7101,7 @@ Transform:
   m_GameObject: {fileID: 1525345650}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.85, y: -4.02, z: -10}
+  m_LocalPosition: {x: -6.68, y: -4.02, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
