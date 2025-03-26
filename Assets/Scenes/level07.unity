@@ -23816,7 +23816,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Up and Down
+  m_text: Saw Face
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e5a9c626eb07f3149a85e1c0c5caf47f, type: 2}
   m_sharedMaterial: {fileID: 7261449596306527356, guid: e5a9c626eb07f3149a85e1c0c5caf47f, type: 2}
