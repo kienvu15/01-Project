@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     public FlashEffect flashEffect;
     public GridSpawner gridSpawner;
     public Transform respawnPoint;
-    public SoftBlock[] softBlocks;
+    
     public Runenemy[] enemies;
     public PLboss[] bosses;
     public BossJump BossJump;
@@ -117,10 +117,7 @@ public class PlayerController : MonoBehaviour
         CheckVerticalState();
         UpdateJumpVariales();
         DustO();
-        if (isDead)
-        {
-            ResetSoftBlocks();
-        }
+        
     }
 
     private bool Grounded()
@@ -197,10 +194,10 @@ public class PlayerController : MonoBehaviour
 
         if (rb.linearVelocity.y < 0)
         {
-            
             if (Input.GetKey(KeyCode.Space))
             {
                 rb.gravityScale = glideGravityScale;
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, -1);
                 anim.SetBool("Dive", true);
                 Debug.Log("Guide while fall");
             }
@@ -247,7 +244,7 @@ public class PlayerController : MonoBehaviour
                 Instantiate(DustBlast, Foot.position, Quaternion.Euler(0, 0, 90));
                 audioSource.PlayOneShot(jumpSound);
             }
-            else if (!Grounded() && airjumpCount < maxAirJump && Input.GetKeyDown(KeyCode.Space))
+            else if (isGround == true && airjumpCount < maxAirJump && Input.GetKeyDown(KeyCode.Space))
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
                 jumping = true;
@@ -396,53 +393,61 @@ public class PlayerController : MonoBehaviour
         myBodyCollider.enabled = false;
         StartCoroutine(Respawn());
     }
-
+    public bool respawn = false;
     private IEnumerator Respawn()
     {
+        respawn = true;
+        GameObject tempGround = new GameObject("TempGround");
+        tempGround.transform.position = respawnPoint.position + new Vector3(0, -1, 0);
+        BoxCollider2D tempCollider = tempGround.AddComponent<BoxCollider2D>();
+        tempCollider.isTrigger = false; // Đảm bảo nền có va chạm
+
+        yield return new WaitForSeconds(0.5f); // Đợi một chút để nhân vật ổn định
+        Destroy(tempGround); // Xóa nền tạm thời
+        GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+
         deathCount++;
         PlayerPrefs.SetInt("DeathCount", deathCount);
         PlayerPrefs.Save();
         UpdateDeathUI();
 
+        // Đặt lại vị trí camera
         Camera.main.transform.position = new Vector3(respawnPoint.position.x, respawnPoint.position.y, Camera.main.transform.position.z);
-        yield return new WaitForSeconds(3f);
-        rb.bodyType = RigidbodyType2D.Dynamic;
-        myBodyCollider.enabled = true;
-        yield return new WaitForSeconds(0.5f);
-        Debug.Log("🔄 Respawning...");
-        // Đưa nhân vật về vị trí checkpoint
+
+        yield return new WaitForSeconds(3f); // Đợi hiệu ứng chết
+
+        // Đặt nhân vật về vị trí respawn trước khi bật lại vật lý
         transform.position = respawnPoint.position;
+
+        // Reset Rigidbody và Collider
+        rb.bodyType = RigidbodyType2D.Kinematic;
+        rb.linearVelocity = Vector2.zero; // Reset tốc độ để tránh rơi tiếp
+        rb.angularVelocity = 0f;
+        myBodyCollider.enabled = true;
+        yield return new WaitForSeconds(0.1f); // Đợi một frame để đảm bảo collider đã bật
+        
+        // Đổi về Dynamic sau khi đã ổn định vị trí
+        rb.bodyType = RigidbodyType2D.Dynamic;
+
+        Debug.Log("🔄 Respawning...");
 
         // Reset trạng thái nhân vật
         isDead = false;
         anim.SetBool("Die", false);
         anim.Play("Idle");
-
-        // Reset các gạch rơi
+        LockDoorManager.Instance.ResetAllDoors();
+        KeyManager.Instance.ResetAllKeys();
+        BoxManager.Instance.ResetAllBoxes();
+        SoftBlockManager.Instance.ResetAllSoftBlocks();
+        // Reset các nền và enemy
         FallBrick.ResetAllBricks();
-       
-        foreach (PLboss boss in bosses)
-        {
-            boss.ResetBoss(); // Reset từng Boss
-        }
-
-        // Reset tất cả enemy về vị trí và trạng thái ban đầu
-        foreach (Runenemy enemy in enemies)
-        {
-            enemy.ResetEnemy();
-        }
-
+        foreach (PLboss boss in bosses) boss.ResetBoss();
+        foreach (Runenemy enemy in enemies) enemy.ResetEnemy();
         BossJump.ResetBoss();
+
+        
     }
 
-
-    void ResetSoftBlocks()
-    {
-        foreach (SoftBlock block in softBlocks)
-        {
-            block.ResetPlatform();
-        }
-    }
 
 
 
