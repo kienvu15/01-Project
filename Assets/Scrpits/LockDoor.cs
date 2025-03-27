@@ -4,33 +4,27 @@ public class LockDoor : MonoBehaviour
 {
     private Animator anim;
 
-    void Start()
+    private void Start()
     {
         anim = GetComponent<Animator>();
+        LockDoorManager.Instance.RegisterDoor(this); // Đăng ký vào Manager
     }
 
-    // Hàm chạy animation
     public void PlayAnimation()
     {
         if (anim != null)
         {
-            anim.Play("LockDoorDisappear"); // Đảm bảo animation có parameter trigger "Open"
-        }
-        else
-        {
-            Debug.LogWarning("Animator chưa được gán trên object này!");
+            anim.Play("LockDoorDisappear");
         }
     }
-    public void Deactive()
+
+    public void Deactivate()
     {
         gameObject.SetActive(false);
     }
+
     public void Actice()
     {
         gameObject.SetActive(true);
-    }
-    public void DoneAnim()
-    {
-        Destroy(gameObject);
     }
 }

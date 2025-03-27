@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SoftBlock : MonoBehaviour
 {
@@ -12,24 +11,25 @@ public class SoftBlock : MonoBehaviour
     [SerializeField] private float fallDelay = 1f;
     [SerializeField] private float destroyDelay = 2f;
 
-
     void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         initialPosition = transform.position; // Lưu vị trí ban đầu
+
+        SoftBlockManager.Instance.RegisterSoftBlock(this); // Đăng ký vào Manager
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && !isActivated)
         {
             isActivated = true;
             anim.Play("Zinggel_Sofr");
         }
     }
-    
+
     public void DeActive()
     {
         boxCollider.enabled = false;
@@ -40,13 +40,15 @@ public class SoftBlock : MonoBehaviour
         gameObject.SetActive(false); // Ẩn thay vì destroy
     }
 
-    // Hàm Reset Platform
-    public void ResetPlatform()
+    // 🛠 Reset lại SoftBlock khi Player Respawn
+    public void ResetSoftBlock()
     {
         gameObject.SetActive(true);
         transform.position = initialPosition;
+        rb.linearVelocity = Vector2.zero;
+        rb.angularVelocity = 0f;
         boxCollider.enabled = true;
         isActivated = false;
-        anim.Play("Idle"); // Hoặc trạng thái mặc định
+        anim.Play("Idle"); // Reset animation về trạng thái mặc định
     }
 }

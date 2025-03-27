@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using System.Collections.Generic;
+﻿using System.Collections;
+using UnityEngine;
 
 public class FallBrick : MonoBehaviour
 {
@@ -18,33 +18,41 @@ public class FallBrick : MonoBehaviour
     private Quaternion initialRotation;
     private RigidbodyType2D initialBodyType;
 
-    // Danh sách chứa tất cả FallBrick
-    private static List<FallBrick> allBricks = new List<FallBrick>();
-
     private void Start()
     {
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
+
+        // Kiểm tra gravity scale
+        if (body.gravityScale == 0)
+            body.gravityScale = 1f;
 
         // Lưu trạng thái ban đầu
         initialPosition = transform.position;
         initialRotation = transform.rotation;
         initialBodyType = body.bodyType;
 
-        // Đăng ký vào danh sách quản lý
-        allBricks.Add(this);
+        // Đăng ký vào FallBrickManager
+        FallBrickManager.Instance.RegisterBrick(this);
     }
 
     public void OnComlpete()
     {
         animator.Play("IdleBrick");
         body.bodyType = RigidbodyType2D.Dynamic;
-        aware.SetActive(false);
+        body.gravityScale = 1f;
+
+        if (aware != null)
+        {
+            aware.SetActive(true); // Không tắt Aware
+        }
+
         Instantiate(DustBlast, body.position, Quaternion.identity);
         Instantiate(DustBlast2, point.position, Quaternion.identity);
         Instantiate(DustBlast2, point2.position, Quaternion.identity);
     }
-    
+
+
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
@@ -54,26 +62,53 @@ public class FallBrick : MonoBehaviour
         }
     }
 
-
+    // 🛠 Reset lại FallBrick khi Player Respawn
     public void ResetBrick()
     {
-        // Reset vị trí và trạng thái
+        // Đặt lại vị trí, xoay và trạng thái Rigidbody
         transform.position = initialPosition;
         transform.rotation = initialRotation;
         body.bodyType = initialBodyType;
         body.linearVelocity = Vector2.zero;
         body.angularVelocity = 0f;
-        aware.SetActive (true);
+
+        // Bật lại Animator nhưng đảm bảo nó không chạy animation trước đó
         animator.enabled = true;
+        animator.Play("IdleBrick", 0, 0f); // Reset về frame đầu tiên
+
+        // Reset Collider nếu cần
+        Collider2D col = GetComponent<Collider2D>();
+        if (col != null)
+        {
+            col.enabled = false;
+            Invoke(nameof(ReenableCollider), 0.1f);
+        }
+
+        // Reset trạng thái của Aware để không bị kích hoạt ngay
+        if (aware != null)
+        {
+            aware.SetActive(true);
+
+            Aware awareScript = aware.GetComponent<Aware>();
+            if (awareScript != null)
+            {
+                awareScript.ResetAware();
+            }
+        }
+
         gameObject.SetActive(true);
     }
 
-    // Reset tất cả các FallBrick
-    public static void ResetAllBricks()
+    private void ReenableCollider()
     {
-        foreach (var brick in allBricks)
+        Collider2D col = GetComponent<Collider2D>();
+        if (col != null)
         {
-            brick.ResetBrick();
+            col.enabled = true;
         }
     }
+
+
+
+
 }
