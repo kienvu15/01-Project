@@ -12,6 +12,7 @@ TagManager:
   - Button
   - Spring
   - Item
+  - Ground
   layers:
   - Default
   - TransparentFX

@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     public PLboss[] bosses;
     public BossJump BossJump;
 
-    public FallBrick FallBrick;
+    
     
 
     Rigidbody2D rb;
@@ -435,12 +435,13 @@ public class PlayerController : MonoBehaviour
         isDead = false;
         anim.SetBool("Die", false);
         anim.Play("Idle");
+        FallBrickManager.Instance.ResetAllBricks();
         LockDoorManager.Instance.ResetAllDoors();
         KeyManager.Instance.ResetAllKeys();
         BoxManager.Instance.ResetAllBoxes();
         SoftBlockManager.Instance.ResetAllSoftBlocks();
-        // Reset các nền và enemy
-        FallBrick.ResetAllBricks();
+        
+
         foreach (PLboss boss in bosses) boss.ResetBoss();
         foreach (Runenemy enemy in enemies) enemy.ResetEnemy();
         BossJump.ResetBoss();
