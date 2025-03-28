@@ -12050,7 +12050,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1323555176
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13682,9 +13682,11 @@ PolygonCollider2D:
     m_Paths:
     - - {x: 43.379585, y: 3.7529354}
       - {x: -15.9670725, y: 3.8961756}
-      - {x: -16.10433, y: -11.987605}
-      - {x: 1.0466076, y: -11.820759}
-      - {x: 43.66327, y: -11.745505}
+      - {x: -16.401945, y: -10.286952}
+      - {x: 0.96196556, y: -11.092827}
+      - {x: 1.2328221, y: -11.092827}
+      - {x: 2.6084318, y: -11.036511}
+      - {x: 43.597893, y: -10.42019}
   m_UseDelaunayMesh: 0
 --- !u!1001 &1639357966
 PrefabInstance:
