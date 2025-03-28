@@ -5859,20 +5859,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8136883322535348279, guid: 7a765ac200694534281e02a2b4eba05c, type: 3}
       propertyPath: lockdoor.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8136883322535348279, guid: 7a765ac200694534281e02a2b4eba05c, type: 3}
       propertyPath: 'lockdoor.Array.data[0]'
       value: 
-      objectReference: {fileID: 1368327598}
+      objectReference: {fileID: 1242747341}
     - target: {fileID: 8136883322535348279, guid: 7a765ac200694534281e02a2b4eba05c, type: 3}
       propertyPath: 'lockdoor.Array.data[1]'
       value: 
-      objectReference: {fileID: 1242747341}
+      objectReference: {fileID: 48651805}
     - target: {fileID: 8136883322535348279, guid: 7a765ac200694534281e02a2b4eba05c, type: 3}
       propertyPath: 'lockdoor.Array.data[2]'
       value: 
-      objectReference: {fileID: 48651805}
+      objectReference: {fileID: 1368327598}
     - target: {fileID: 8136883322535348279, guid: 7a765ac200694534281e02a2b4eba05c, type: 3}
       propertyPath: 'lockdoor.Array.data[3]'
       value: 

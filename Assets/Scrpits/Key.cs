@@ -1,10 +1,12 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class Key : MonoBehaviour
 {
     public GameObject[] lockdoor; // Danh sách cửa mà Key này mở
     private Animator anim;
     private bool isUsed = false; // Trạng thái đã sử dụng
+    public float delayBetweenDoors = 1f; // Độ trễ giữa mỗi lần mở cửa
 
     void Start()
     {
@@ -16,23 +18,36 @@ public class Key : MonoBehaviour
     {
         if (collision.CompareTag("Player") && !isUsed)
         {
-            isUsed = true; // Đánh dấu đã sử dụng để không bị kích hoạt nhiều lần
+            isUsed = true;
             anim.Play("KeyDisapear");
+
+            // Gọi Coroutine từ KeyManager
+            KeyManager.Instance.StartOpeningDoors(lockdoor);
         }
+
     }
 
     public void DestroyAfterAnim()
     {
         gameObject.SetActive(false); // Ẩn chìa khóa sau animation
 
-        // Mở cửa tương ứng với Key này
+        // Bắt đầu Coroutine mở cửa theo thứ tự
+        StartCoroutine(OpenDoorsInOrder());
+    }
+
+    private IEnumerator OpenDoorsInOrder()
+    {
         foreach (GameObject door in lockdoor)
         {
-            LockDoor lockDoorScript = door.GetComponent<LockDoor>();
-            if (lockDoorScript != null)
+            if (door != null)
             {
-                lockDoorScript.PlayAnimation();
+                LockDoor lockDoorScript = door.GetComponent<LockDoor>();
+                if (lockDoorScript != null)
+                {
+                    lockDoorScript.PlayAnimation();
+                }
             }
+            yield return new WaitForSeconds(delayBetweenDoors); // Chờ trước khi mở cửa tiếp theo
         }
     }
 
