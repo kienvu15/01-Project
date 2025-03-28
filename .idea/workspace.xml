@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5c90429-d6a9-4bdc-b47e-9cd7b0a8d62b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Stagelevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Stagelevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/level02.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/level02.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,10 +49,8 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://D:/duan1/Assets/Scenes/level03.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/duan1/Assets/Scenes/level03.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/duan1/Assets/Sprte/New Folder/sprite-605-0.png.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/duan1/Assets/Sprte/New Folder/sprite-605-0.png.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/duan1/Assets/Scenes/Done/level02.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/duan1/Assets/Scenes/Done/level02.unity" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -93,6 +89,7 @@
       <workItem from="1742748555113" duration="653000" />
       <workItem from="1742980093785" duration="179000" />
       <workItem from="1742980311846" duration="3203000" />
+      <workItem from="1743059594293" duration="257000" />
     </task>
     <task id="LOCAL-00001" summary="capnhap">
       <option name="closed" value="true" />

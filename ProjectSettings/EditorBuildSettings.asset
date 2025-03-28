@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Open/Stagelevel.unity
     guid: f3e88697bdfe2d94299962674a598f0c
   - enabled: 1
-    path: Assets/Scenes/Level 01.unity
+    path: Assets/Scenes/Level01.unity
     guid: 690b85bbcb90e384d804442d30e3fdc5
   - enabled: 1
     path: Assets/Scenes/World-01/level02.unity
