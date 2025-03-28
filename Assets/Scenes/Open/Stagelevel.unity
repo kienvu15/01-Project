@@ -1314,7 +1314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2525,7 +2525,7 @@ Transform:
   m_GameObject: {fileID: 734789232}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 491.40002, y: 119.880005, z: -9720}
+  m_LocalPosition: {x: 491.40002, y: 148, z: -9720}
   m_LocalScale: {x: 108, y: 108, z: 108}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5551,13 +5551,13 @@ MonoBehaviour:
   panel: {fileID: 0}
   objectPrefab: {fileID: 7954744453411052587, guid: 5c9c57c5a2e08b64fb209cfe65203eee, type: 3}
   columns: 15
-  rows: 7
+  rows: 8
   spacing: 1.45
   spawnOrigin: {fileID: 1678888594}
   flashEffect: {fileID: 1678888601}
   animationName: OpenTransition
   audioSource: {fileID: 1678888595}
-  startSound: {fileID: 8300000, guid: 5771ee0ea356f0b4ba85011f82ae85d1, type: 3}
+  startSound: {fileID: 0}
 --- !u!114 &1678888598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5603,7 +5603,7 @@ MonoBehaviour:
   panel: {fileID: 0}
   objectPrefab: {fileID: 5618702270348417392, guid: e903827c1a57c4b42902c06220283396, type: 3}
   columns: 15
-  rows: 7
+  rows: 8
   spacing: 1.48
   rowDelay: 0.16
   spawnOrigin: {fileID: 1678888594}
@@ -5623,7 +5623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashImage: {fileID: 227161072}
   flashDuration: 0.3
-  flashColor: {r: 1, g: 1, b: 1, a: 0.023529412}
+  flashColor: {r: 1, g: 1, b: 1, a: 0}
   fadeTime: 0.3
 --- !u!1 &1687858281
 GameObject:
@@ -6313,7 +6313,7 @@ Transform:
   m_GameObject: {fileID: 1838895622}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -490.32, y: 119.880005, z: -9720}
+  m_LocalPosition: {x: -490.32, y: 147, z: -9720}
   m_LocalScale: {x: 108, y: 108, z: 108}
   m_ConstrainProportionsScale: 0
   m_Children: []
