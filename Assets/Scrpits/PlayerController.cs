@@ -14,12 +14,12 @@ public class PlayerController : MonoBehaviour
     public FlashEffect flashEffect;
     public GridSpawner gridSpawner;
     public Transform respawnPoint;
-    public SoftBlock[] softBlocks;
+    
     public Runenemy[] enemies;
     public PLboss[] bosses;
     public BossJump BossJump;
 
-    public FallBrick FallBrick;
+    
     
 
     Rigidbody2D rb;
@@ -66,8 +66,9 @@ public class PlayerController : MonoBehaviour
 
     public TextMeshProUGUI deathCounterText;
     private int deathCount=0;
+    public float appearForce;
 
-
+    public int collectedItems = 0;
 
     void Start()
     {
@@ -79,12 +80,19 @@ public class PlayerController : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         playerController = GetComponent<PlayerController>();
 
-        rb.AddForce(new Vector2(0, 10f), ForceMode2D.Impulse);
-        anim.Play("Appear");
-        //StartCoroutine(flashEffect.StartFlash());
-
+        StartCoroutine(Appear());
+    
         deathCount = PlayerPrefs.GetInt("DeathCount", 0);
         UpdateDeathUI();
+    }
+
+    public IEnumerator Appear()
+    {
+        yield return new WaitForSeconds(0.3f);
+        rb.AddForce(new Vector2(0, appearForce), ForceMode2D.Impulse);
+        anim.Play("Appear");
+        yield return new WaitForSeconds(0.3f);
+        anim.SetBool("Fall", true);
     }
 
     void UpdateDeathUI()
@@ -111,15 +119,23 @@ public class PlayerController : MonoBehaviour
         CheckVerticalState();
         UpdateJumpVariales();
         DustO();
-        if (isDead)
-        {
-            ResetSoftBlocks();
-        }
+        
     }
-
+    public  float rayLength = 3f;
     private bool Grounded()
     {
-        bool grounded = myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"));
+         // Chiều dài tia raycast
+        Vector2 rayOrigin = transform.position; // Điểm bắn tia
+        Vector2 rayDirection = Vector2.down; // Hướng xuống
+
+        // Bắn tia Raycast
+        RaycastHit2D hit = Physics2D.Raycast(rayOrigin, rayDirection, rayLength, LayerMask.GetMask("Ground"));
+
+        // Vẽ raycast để quan sát trong Scene
+        Color rayColor = (hit.collider != null) ? Color.green : Color.red; // Xanh nếu chạm, đỏ nếu không chạm
+        Debug.DrawRay(rayOrigin, rayDirection * rayLength, rayColor);
+
+        bool grounded = hit.collider != null;
 
         if (grounded)
         {
@@ -133,6 +149,8 @@ public class PlayerController : MonoBehaviour
 
         return grounded;
     }
+
+
     public void Move()
     {
         if (isDead) return;
@@ -174,6 +192,7 @@ public class PlayerController : MonoBehaviour
     void Glide()
     {
         if (isDead == true) return;
+
         if (jumping)
         {
             if (Input.GetKey(KeyCode.Space))
@@ -187,12 +206,15 @@ public class PlayerController : MonoBehaviour
                 anim.SetBool("Dive", false);
             }
         }
-        if (!isGround && rb.linearVelocity.y < 0)
+
+        if (rb.linearVelocity.y < 0)
         {
             if (Input.GetKey(KeyCode.Space))
             {
                 rb.gravityScale = glideGravityScale;
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, -1);
                 anim.SetBool("Dive", true);
+                Debug.Log("Guide while fall");
             }
             else
             {
@@ -237,7 +259,7 @@ public class PlayerController : MonoBehaviour
                 Instantiate(DustBlast, Foot.position, Quaternion.Euler(0, 0, 90));
                 audioSource.PlayOneShot(jumpSound);
             }
-            else if (!Grounded() && airjumpCount < maxAirJump && Input.GetKeyDown(KeyCode.Space))
+            else if (isGround == true && airjumpCount < maxAirJump && Input.GetKeyDown(KeyCode.Space))
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
                 jumping = true;
@@ -346,7 +368,13 @@ public class PlayerController : MonoBehaviour
 
             Die();
         }
-        
+        if (collision.CompareTag("Item"))
+        {
+            collectedItems++;
+            PlayerPrefs.SetInt("CollectedItems", collectedItems);
+            PlayerPrefs.Save(); 
+        }
+
     }
     
     private IEnumerator TeleportAfterFlash()
@@ -373,7 +401,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
     private void Die()
     {
         Debug.Log("💀 Player Died!");
@@ -381,56 +408,80 @@ public class PlayerController : MonoBehaviour
         myBodyCollider.enabled = false;
         StartCoroutine(Respawn());
     }
-
+    public bool respawn = false;
     private IEnumerator Respawn()
     {
+        respawn = true;
+        GameObject tempGround = new GameObject("TempGround");
+        tempGround.transform.position = respawnPoint.position + new Vector3(0, -1, 0);
+        BoxCollider2D tempCollider = tempGround.AddComponent<BoxCollider2D>();
+        tempCollider.isTrigger = false; // Đảm bảo nền có va chạm
+
+        yield return new WaitForSeconds(0.5f); // Đợi một chút để nhân vật ổn định
+        Destroy(tempGround); // Xóa nền tạm thời
+        GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+
         deathCount++;
         PlayerPrefs.SetInt("DeathCount", deathCount);
         PlayerPrefs.Save();
         UpdateDeathUI();
 
+        // Đặt lại vị trí camera
         Camera.main.transform.position = new Vector3(respawnPoint.position.x, respawnPoint.position.y, Camera.main.transform.position.z);
+
+        yield return new WaitForSeconds(3f); // Đợi hiệu ứng chết
+
+        // Đặt nhân vật về vị trí respawn trước khi bật lại vật lý
+        transform.position = respawnPoint.position;
+
+        // Reset Rigidbody và Collider
+        rb.bodyType = RigidbodyType2D.Kinematic;
+        rb.linearVelocity = Vector2.zero; // Reset tốc độ để tránh rơi tiếp
+        rb.angularVelocity = 0f;
+        myBodyCollider.enabled = true;
+        yield return new WaitForSeconds(0.1f); // Đợi một frame để đảm bảo collider đã bật
+        
+        // Đổi về Dynamic sau khi đã ổn định vị trí
         rb.bodyType = RigidbodyType2D.Dynamic;
-        yield return new WaitForSeconds(3f);
 
         Debug.Log("🔄 Respawning...");
-        myBodyCollider.enabled = true;
-        
-
-        // Đưa nhân vật về vị trí checkpoint
-        transform.position = respawnPoint.position;
 
         // Reset trạng thái nhân vật
         isDead = false;
         anim.SetBool("Die", false);
         anim.Play("Idle");
 
-        // Reset các gạch rơi
-        FallBrick.ResetAllBricks();
-        BossJump.ResetBoss();
+        yield return new WaitForSeconds(0.2f); // Đợi một chút trước khi reset tất cả
 
+        // Kiểm tra null trước khi gọi Reset
+        if (FallBrickManager.Instance != null)
+            FallBrickManager.Instance.ResetAllBricks();
+
+        if (LockDoorManager.Instance != null)
+            LockDoorManager.Instance.ResetAllDoors();
+
+        if (KeyManager.Instance != null)
+            KeyManager.Instance.ResetAllKeys();
+
+        if (BoxManager.Instance != null)
+            BoxManager.Instance.ResetAllBoxes();
+
+        if (SoftBlockManager.Instance != null)
+            SoftBlockManager.Instance.ResetAllSoftBlocks();
 
         foreach (PLboss boss in bosses)
-        {
-            boss.ResetBoss(); // Reset từng Boss
-        }
+            boss.ResetBoss();
 
-        // Reset tất cả enemy về vị trí và trạng thái ban đầu
         foreach (Runenemy enemy in enemies)
-        {
             enemy.ResetEnemy();
-        }
+
+        if (BossJump != null)
+            BossJump.ResetBoss();
+
+
 
     }
 
-
-    void ResetSoftBlocks()
-    {
-        foreach (SoftBlock block in softBlocks)
-        {
-            block.ResetPlatform();
-        }
-    }
 
 
 
