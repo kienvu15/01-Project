@@ -1954,7 +1954,7 @@ MonoBehaviour:
   panel: {fileID: 6331734987227641361}
   objectPrefab: {fileID: 7954744453411052587, guid: 5c9c57c5a2e08b64fb209cfe65203eee, type: 3}
   columns: 15
-  rows: 7
+  rows: 8
   spacing: 1.45
   spawnOrigin: {fileID: 527772848}
   flashEffect: {fileID: 527772847}
@@ -1992,7 +1992,7 @@ MonoBehaviour:
   panel: {fileID: 6331734987227641361}
   objectPrefab: {fileID: 5618702270348417392, guid: e903827c1a57c4b42902c06220283396, type: 3}
   columns: 15
-  rows: 7
+  rows: 8
   spacing: 1.48
   rowDelay: 0.16
   spawnOrigin: {fileID: 527772848}
@@ -2023,7 +2023,7 @@ Transform:
   m_GameObject: {fileID: 527772841}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.42, y: 4.39, z: 10}
+  m_LocalPosition: {x: -10.02, y: 4.73, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -6058,7 +6058,7 @@ MonoBehaviour:
   panel: {fileID: 1825957538}
   objectPrefab: {fileID: 7954744453411052587, guid: 5c9c57c5a2e08b64fb209cfe65203eee, type: 3}
   columns: 15
-  rows: 7
+  rows: 8
   spacing: 1.45
   spawnOrigin: {fileID: 1186429167}
   flashEffect: {fileID: 1186429174}
@@ -6110,7 +6110,7 @@ MonoBehaviour:
   panel: {fileID: 1825957538}
   objectPrefab: {fileID: 5618702270348417392, guid: e903827c1a57c4b42902c06220283396, type: 3}
   columns: 15
-  rows: 7
+  rows: 8
   spacing: 1.48
   rowDelay: 0.16
   spawnOrigin: {fileID: 1186429167}

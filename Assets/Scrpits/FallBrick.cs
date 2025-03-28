@@ -60,6 +60,10 @@ public class FallBrick : MonoBehaviour
             body.bodyType = RigidbodyType2D.Static;
             animator.enabled = false;
         }
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            animator.Play("Shake");
+        }
     }
 
     // 🛠 Reset lại FallBrick khi Player Respawn
@@ -74,8 +78,8 @@ public class FallBrick : MonoBehaviour
 
         // Bật lại Animator nhưng đảm bảo nó không chạy animation trước đó
         animator.enabled = true;
-        animator.Play("IdleBrick", 0, 0f); // Reset về frame đầu tiên
-
+        animator.Play("IdleBrick", 0, 0f);
+        
         // Reset Collider nếu cần
         Collider2D col = GetComponent<Collider2D>();
         if (col != null)

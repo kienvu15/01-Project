@@ -205,13 +205,11 @@ MonoBehaviour:
   flashEffect: {fileID: 0}
   gridSpawner: {fileID: 0}
   respawnPoint: {fileID: 0}
-  softBlocks: []
   enemies:
   - {fileID: 0}
   - {fileID: 0}
   bosses: []
   BossJump: {fileID: 0}
-  FallBrick: {fileID: 0}
   jumpSound: {fileID: 8300000, guid: e01a51aa95832914badcea87b283ff90, type: 3}
   moveSound: {fileID: 8300000, guid: 7c5f272a3e02af8429e7c4dfc34d39c8, type: 3}
   moveSpeed: 3.5
@@ -230,7 +228,9 @@ MonoBehaviour:
   deathCounterText: {fileID: 0}
   appearForce: 6.66
   collectedItems: 0
+  rayLength: 0.52
   isDoublejump: 0
+  respawn: 0
 --- !u!82 &796078270840674214
 AudioSource:
   m_ObjectHideFlags: 0
