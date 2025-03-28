@@ -138,7 +138,6 @@ GameObject:
   - component: {fileID: 5084261859500978354}
   - component: {fileID: 8880715571766235050}
   - component: {fileID: 2251474889286296014}
-  - component: {fileID: 3076422729525295503}
   m_Layer: 0
   m_Name: Fall-Spike
   m_TagString: Untagged
@@ -216,7 +215,7 @@ SpriteRenderer:
   m_Size: {x: 0.53333336, y: 0.53333336}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &403021187120515263
@@ -338,18 +337,6 @@ MonoBehaviour:
   point: {fileID: 4457814240977281626}
   point2: {fileID: 2262603654069969293}
   aware: {fileID: 3269064114564159817}
---- !u!114 &3076422729525295503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3564023045315721984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 801191a5990cc264ba37794470d6230d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6885564334102449957
 GameObject:
   m_ObjectHideFlags: 0

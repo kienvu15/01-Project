@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     [Space(5)]
 
     [Header("Movement")]
-    [SerializeField] float moveSpeed = 6f;
+    [SerializeField] float moveSpeed = 3.5f;
     [SerializeField] float airMoveSpeed = 5f;
     private float moveX;
     private bool isFacingRight = true;
@@ -90,7 +90,9 @@ public class PlayerController : MonoBehaviour
     {
         yield return new WaitForSeconds(0.3f);
         rb.AddForce(new Vector2(0, appearForce), ForceMode2D.Impulse);
-        anim.Play("Appear");   
+        anim.Play("Appear");
+        yield return new WaitForSeconds(0.3f);
+        anim.SetBool("Fall", true);
     }
 
     void UpdateDeathUI()
@@ -119,10 +121,21 @@ public class PlayerController : MonoBehaviour
         DustO();
         
     }
-
+    public float rayLength = 3f;
     private bool Grounded()
     {
-        bool grounded = myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"));
+         // Chiều dài tia raycast
+        Vector2 rayOrigin = transform.position; // Điểm bắn tia
+        Vector2 rayDirection = Vector2.down; // Hướng xuống
+
+        // Bắn tia Raycast
+        RaycastHit2D hit = Physics2D.Raycast(rayOrigin, rayDirection, rayLength, LayerMask.GetMask("Ground"));
+
+        // Vẽ raycast để quan sát trong Scene
+        Color rayColor = (hit.collider != null) ? Color.green : Color.red; // Xanh nếu chạm, đỏ nếu không chạm
+        Debug.DrawRay(rayOrigin, rayDirection * rayLength, rayColor);
+
+        bool grounded = hit.collider != null;
 
         if (grounded)
         {
@@ -136,6 +149,8 @@ public class PlayerController : MonoBehaviour
 
         return grounded;
     }
+
+
     public void Move()
     {
         if (isDead) return;
@@ -435,18 +450,36 @@ public class PlayerController : MonoBehaviour
         isDead = false;
         anim.SetBool("Die", false);
         anim.Play("Idle");
-        FallBrickManager.Instance.ResetAllBricks();
-        LockDoorManager.Instance.ResetAllDoors();
-        KeyManager.Instance.ResetAllKeys();
-        BoxManager.Instance.ResetAllBoxes();
-        SoftBlockManager.Instance.ResetAllSoftBlocks();
-        
 
-        foreach (PLboss boss in bosses) boss.ResetBoss();
-        foreach (Runenemy enemy in enemies) enemy.ResetEnemy();
-        BossJump.ResetBoss();
+        yield return new WaitForSeconds(0.2f); // Đợi một chút trước khi reset tất cả
 
-        
+        // Kiểm tra null trước khi gọi Reset
+        if (FallBrickManager.Instance != null)
+            FallBrickManager.Instance.ResetAllBricks();
+
+        if (LockDoorManager.Instance != null)
+            LockDoorManager.Instance.ResetAllDoors();
+
+        if (KeyManager.Instance != null)
+            KeyManager.Instance.ResetAllKeys();
+
+        if (BoxManager.Instance != null)
+            BoxManager.Instance.ResetAllBoxes();
+
+        if (SoftBlockManager.Instance != null)
+            SoftBlockManager.Instance.ResetAllSoftBlocks();
+
+        foreach (PLboss boss in bosses)
+            boss.ResetBoss();
+
+        foreach (Runenemy enemy in enemies)
+            enemy.ResetEnemy();
+
+        if (BossJump != null)
+            BossJump.ResetBoss();
+
+
+
     }
 
 

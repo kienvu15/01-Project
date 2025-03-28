@@ -14,7 +14,11 @@ public class LockDoor : MonoBehaviour
     {
         if (anim != null)
         {
-            anim.Play("LockDoorDisappear");
+            anim.SetTrigger("Open"); // Đảm bảo Animation Controller có parameter "Open"
+        }
+        else
+        {
+            Debug.LogWarning("Animator không tìm thấy trên " + gameObject.name);
         }
     }
 

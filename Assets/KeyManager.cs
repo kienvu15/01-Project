@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class KeyManager : MonoBehaviour
@@ -34,4 +35,28 @@ public class KeyManager : MonoBehaviour
             key.ResetKey(); // Reset trạng thái Key
         }
     }
+
+
+    public void StartOpeningDoors(GameObject[] doors)
+    {
+        StartCoroutine(OpenDoorsInOrder(doors));
+    }
+
+    private IEnumerator OpenDoorsInOrder(GameObject[] doors)
+    {
+        foreach (GameObject door in doors)
+        {
+            if (door == null) continue;
+
+            LockDoor lockDoorScript = door.GetComponent<LockDoor>();
+            if (lockDoorScript != null)
+            {
+                lockDoorScript.PlayAnimation();
+            }
+
+            yield return new WaitForSeconds(1f); // Chờ trước khi mở cửa tiếp theo
+        }
+    }
+
+
 }
