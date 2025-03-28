@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 9151247704608288539}
   - component: {fileID: 5035019496548227761}
   - component: {fileID: 3497346697707471543}
-  - component: {fileID: 1082231796943234710}
   m_Layer: 0
   m_Name: sprite-31-0_0
   m_TagString: Untagged
@@ -27,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6921243513883043835}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.05, y: -0.4, z: -0.66556156}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -142,15 +141,3 @@ PolygonCollider2D:
       - {x: 0.25, y: 0.03125}
       - {x: 0.125, y: 0.15625}
   m_UseDelaunayMesh: 0
---- !u!114 &1082231796943234710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6921243513883043835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de1692241822c13469b76a45a366cb9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

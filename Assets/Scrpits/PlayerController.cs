@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     [Space(5)]
 
     [Header("Movement")]
-    [SerializeField] float moveSpeed = 6f;
+    [SerializeField] float moveSpeed = 3.5f;
     [SerializeField] float airMoveSpeed = 5f;
     private float moveX;
     private bool isFacingRight = true;
@@ -121,7 +121,7 @@ public class PlayerController : MonoBehaviour
         DustO();
         
     }
-    public  float rayLength = 3f;
+    public float rayLength = 3f;
     private bool Grounded()
     {
          // Chiều dài tia raycast
