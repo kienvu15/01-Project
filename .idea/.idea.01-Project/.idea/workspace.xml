@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c297d734-de11-44a7-b3c3-4cd552477e78" name="Changes" comment="" />
+    <list default="true" id="c297d734-de11-44a7-b3c3-4cd552477e78" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.01-Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.01-Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 12.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 12.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/World-01/level01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/World-01/level01.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/level10.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/level10.unity" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -128,6 +133,8 @@
       <workItem from="1741850049443" duration="8000" />
       <workItem from="1743136339801" duration="89000" />
       <workItem from="1743153978354" duration="96000" />
+      <workItem from="1743156022221" duration="23000" />
+      <workItem from="1743156278802" duration="990000" />
     </task>
     <task id="LOCAL-00001" summary="comment tesst">
       <option name="closed" value="true" />
@@ -361,7 +368,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743154007947</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="111">
+      <option name="closed" value="true" />
+      <created>1743156030509</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1743156030509</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,7 +392,6 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="07" />
     <MESSAGE value="007" />
     <MESSAGE value="110" />
     <MESSAGE value="220" />
@@ -402,6 +416,7 @@
     <MESSAGE value="F1" />
     <MESSAGE value="1" />
     <MESSAGE value="chien1" />
-    <option name="LAST_COMMIT_MESSAGE" value="chien1" />
+    <MESSAGE value="111" />
+    <option name="LAST_COMMIT_MESSAGE" value="111" />
   </component>
 </project>
