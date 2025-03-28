@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3497346697707471543}
   m_Layer: 0
   m_Name: sprite-31-0_0
-  m_TagString: Untagged
+  m_TagString: Enemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -14109871
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 2040756053040083040, guid: 193654940b94d484aa04a51d74585fe9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
