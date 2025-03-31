@@ -10,6 +10,8 @@ public class LevelSelector : MonoBehaviour
     public int levelsPerPanel = 15;       // Số level mỗi panel
     public int levelsPerRow = 5;          // Số button mỗi hàng
 
+
+    
     private void Start()
     {
         GenerateLevelButtons();
@@ -57,5 +59,10 @@ public class LevelSelector : MonoBehaviour
 
         Debug.Log("🔍 Loading Level: " + sceneName);
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+    }
+
+    public void Setting()
+    {
+        
     }
 }

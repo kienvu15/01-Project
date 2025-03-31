@@ -29,11 +29,10 @@ public class Key : MonoBehaviour
 
     public void DestroyAfterAnim()
     {
-        gameObject.SetActive(false); // Ẩn chìa khóa sau animation
-
-        // Bắt đầu Coroutine mở cửa theo thứ tự
-        StartCoroutine(OpenDoorsInOrder());
+        StartCoroutine(OpenDoorsInOrder()); // Chạy Coroutine trước
+        gameObject.SetActive(false); // Sau đó mới ẩn Key
     }
+
 
     private IEnumerator OpenDoorsInOrder()
     {
