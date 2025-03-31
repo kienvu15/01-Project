@@ -34,7 +34,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Users/chiennguyen/RiderProjects/01-Project/Assets/Prefab/Object/Key.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/chiennguyen/RiderProjects/01-Project/Assets/Scenes/Level 12.unity" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -131,6 +131,7 @@
       <workItem from="1743156022221" duration="23000" />
       <workItem from="1743156278802" duration="990000" />
       <workItem from="1743159958770" duration="89000" />
+      <workItem from="1743413578300" duration="37000" />
     </task>
     <task id="LOCAL-00001" summary="comment tesst">
       <option name="closed" value="true" />
@@ -380,7 +381,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743159977604</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="111">
+      <option name="closed" value="true" />
+      <created>1743413601252</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1743413601252</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
