@@ -998,7 +998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc08ee22eb4abc544b4c9059a6f03035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 209949155}
+  panel: {fileID: 77794677}
   objectPrefab: {fileID: 7954744453411052587, guid: 5c9c57c5a2e08b64fb209cfe65203eee, type: 3}
   columns: 15
   rows: 8
@@ -1034,7 +1034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ac80a9d5d569bc45895bddcd3827e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 209949155}
+  panel: {fileID: 77794677}
   objectPrefab: {fileID: 5618702270348417392, guid: e903827c1a57c4b42902c06220283396, type: 3}
   columns: 15
   rows: 8
