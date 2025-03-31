@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c297d734-de11-44a7-b3c3-4cd552477e78" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.01-Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.01-Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 12.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 12.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/World-01/level01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/World-01/level01.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/level10.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/level10.unity" afterDir="false" />
-    </list>
+    <list default="true" id="c297d734-de11-44a7-b3c3-4cd552477e78" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +34,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Users/chiennguyen/RiderProjects/01-Project/Assets/Scenes/level02.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/chiennguyen/RiderProjects/01-Project/Assets/Prefab/Object/Key.prefab" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -135,6 +130,7 @@
       <workItem from="1743153978354" duration="96000" />
       <workItem from="1743156022221" duration="23000" />
       <workItem from="1743156278802" duration="990000" />
+      <workItem from="1743159958770" duration="89000" />
     </task>
     <task id="LOCAL-00001" summary="comment tesst">
       <option name="closed" value="true" />
@@ -376,7 +372,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743156030509</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="111">
+      <option name="closed" value="true" />
+      <created>1743159977604</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1743159977604</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
