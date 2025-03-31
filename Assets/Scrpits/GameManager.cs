@@ -18,4 +18,5 @@ public class GameManager : MonoBehaviour
         yield return StartCoroutine(flashEffect.StartFlash());   
         StartCoroutine(gridSpawner.SpawnGrid());
     }
+
 }

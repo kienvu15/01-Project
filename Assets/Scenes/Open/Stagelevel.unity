@@ -3255,7 +3255,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7019654048026921379, guid: b396cbe0f59f0c14c8c0cbe17704310e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6751,13 +6751,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc08ee22eb4abc544b4c9059a6f03035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 0}
+  panel: {fileID: 2011508417}
   objectPrefab: {fileID: 7954744453411052587, guid: 5c9c57c5a2e08b64fb209cfe65203eee, type: 3}
   columns: 15
   rows: 8
   spacing: 1.45
   spawnOrigin: {fileID: 1678888594}
-  flashEffect: {fileID: 1678888601}
+  flashEffect: {fileID: 0}
   animationName: OpenTransition
   audioSource: {fileID: 1678888595}
   startSound: {fileID: 0}
@@ -6803,14 +6803,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ac80a9d5d569bc45895bddcd3827e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 0}
+  panel: {fileID: 2011508417}
   objectPrefab: {fileID: 5618702270348417392, guid: e903827c1a57c4b42902c06220283396, type: 3}
   columns: 15
   rows: 8
   spacing: 1.48
   rowDelay: 0.16
   spawnOrigin: {fileID: 1678888594}
-  flashEffect: {fileID: 1678888601}
+  flashEffect: {fileID: 0}
   nextSceneName: Win
 --- !u!114 &1678888601
 MonoBehaviour:
@@ -6908,7 +6908,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1687858285
 RectTransform:
@@ -7992,7 +7992,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7814479956766314624, guid: 776f43135a0c1d14ca568a52df5a8486, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
