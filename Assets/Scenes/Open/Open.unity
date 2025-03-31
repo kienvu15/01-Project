@@ -1188,10 +1188,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4d57776348bed54fa8d729c1e619b3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logoanimator: {fileID: 0}
+  logoanimator: {fileID: 743587641}
   leftanimator: {fileID: 571590747}
-  rightanimator: {fileID: 0}
-  flashEffect: {fileID: 0}
+  rightanimator: {fileID: 874233968}
+  flashEffect: {fileID: 976980518}
   playbutton: {fileID: 0}
   soundbutton: {fileID: 0}
   settingbutton: {fileID: 0}
@@ -1604,8 +1604,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   logoanimator: {fileID: 743587641}
-  leftanimator: {fileID: 0}
-  rightanimator: {fileID: 0}
+  leftanimator: {fileID: 571590747}
+  rightanimator: {fileID: 874233968}
   flashEffect: {fileID: 976980518}
   playbutton: {fileID: 333506451}
   soundbutton: {fileID: 1616067943}
@@ -1901,10 +1901,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4d57776348bed54fa8d729c1e619b3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logoanimator: {fileID: 0}
-  leftanimator: {fileID: 0}
+  logoanimator: {fileID: 743587641}
+  leftanimator: {fileID: 571590747}
   rightanimator: {fileID: 874233968}
-  flashEffect: {fileID: 0}
+  flashEffect: {fileID: 976980518}
   playbutton: {fileID: 0}
   soundbutton: {fileID: 0}
   settingbutton: {fileID: 0}
@@ -2043,7 +2043,7 @@ MonoBehaviour:
   rows: 8
   spacing: 1.45
   spawnOrigin: {fileID: 976980519}
-  flashEffect: {fileID: 0}
+  flashEffect: {fileID: 976980518}
   animationName: OpenTransition
   audioSource: {fileID: 976980512}
   startSound: {fileID: 8300000, guid: a636e3ab97b443d479c5d7b5f78285b9, type: 3}

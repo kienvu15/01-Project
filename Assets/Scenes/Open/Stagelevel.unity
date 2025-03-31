@@ -486,7 +486,7 @@ Transform:
   m_GameObject: {fileID: 52839858}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -37, z: -9720}
+  m_LocalPosition: {x: 0, y: 0, z: -9720}
   m_LocalScale: {x: 108, y: 108, z: 108}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2131,7 +2131,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 7, y: 36}
+  m_AnchoredPosition: {x: 7, y: 178}
   m_SizeDelta: {x: 265.5, y: 84.899994}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &265218931
@@ -5200,8 +5200,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -13, y: 5}
+  m_SizeDelta: {x: -577, y: 258}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1288137443
 MonoBehaviour:
@@ -6518,7 +6518,6 @@ GameObject:
   - component: {fileID: 1678888594}
   - component: {fileID: 1678888601}
   - component: {fileID: 1678888600}
-  - component: {fileID: 1678888599}
   - component: {fileID: 1678888598}
   - component: {fileID: 1678888597}
   - component: {fileID: 1678888596}
@@ -6757,10 +6756,10 @@ MonoBehaviour:
   rows: 8
   spacing: 1.45
   spawnOrigin: {fileID: 1678888594}
-  flashEffect: {fileID: 0}
+  flashEffect: {fileID: 1678888601}
   animationName: OpenTransition
   audioSource: {fileID: 1678888595}
-  startSound: {fileID: 0}
+  startSound: {fileID: 8300000, guid: a636e3ab97b443d479c5d7b5f78285b9, type: 3}
 --- !u!114 &1678888598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6774,23 +6773,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1678888596}
-  muteButton: {fileID: 0}
+  muteButton: {fileID: 953040926}
   soundOnIcon: {fileID: 2488193864150925076, guid: 232de5c0ee6a4a843bc817632b3354cd, type: 3}
   soundOffIcon: {fileID: 8624467571274655030, guid: c10aa06f16e6a624d97a8e35ad547f1f, type: 3}
---- !u!114 &1678888599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1678888593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ce111f8e4bf2ad46a0d6784cb20c3ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pausePanel: {fileID: 0}
-  pauseButton: {fileID: 0}
 --- !u!114 &1678888600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6810,7 +6795,7 @@ MonoBehaviour:
   spacing: 1.48
   rowDelay: 0.16
   spawnOrigin: {fileID: 1678888594}
-  flashEffect: {fileID: 0}
+  flashEffect: {fileID: 1678888601}
   nextSceneName: Win
 --- !u!114 &1678888601
 MonoBehaviour:
@@ -6876,12 +6861,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -6898,7 +6883,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 1039054227}
-  m_PlaneDistance: 100.77
+  m_PlaneDistance: 100
   m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
