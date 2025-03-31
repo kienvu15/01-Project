@@ -1997,7 +1997,7 @@ MonoBehaviour:
   rowDelay: 0.16
   spawnOrigin: {fileID: 527772848}
   flashEffect: {fileID: 527772847}
-  nextSceneName: level12
+  nextSceneName: Win
 --- !u!114 &527772847
 MonoBehaviour:
   m_ObjectHideFlags: 0
