@@ -1417,7 +1417,7 @@ MonoBehaviour:
   rowDelay: 0.16
   spawnOrigin: {fileID: 982586190}
   flashEffect: {fileID: 982586189}
-  nextSceneName: 0
+  nextSceneName: 
 --- !u!114 &982586189
 MonoBehaviour:
   m_ObjectHideFlags: 0
