@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8206890239565352364}
   - component: {fileID: 1820255069968816106}
   - component: {fileID: 6553089450994590333}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Jump-Enemy
   m_TagString: Enemies
   m_Icon: {fileID: 0}
@@ -78,8 +78,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -14109871
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 1473265551190234288, guid: 6e493d7f37297c543bf562efc96a66bd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -212,7 +212,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6386265026612683991}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: feet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
