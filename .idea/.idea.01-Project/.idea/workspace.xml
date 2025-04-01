@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c297d734-de11-44a7-b3c3-4cd552477e78" name="Changes" comment="" />
+    <list default="true" id="c297d734-de11-44a7-b3c3-4cd552477e78" name="Changes" comment="nn" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -376,7 +376,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743050452816</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="nn">
+      <option name="closed" value="true" />
+      <created>1743497226492</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1743497226492</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -415,7 +423,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="08" />
     <MESSAGE value="07" />
     <MESSAGE value="007" />
     <MESSAGE value="110" />
@@ -440,6 +447,7 @@
     <MESSAGE value="Fall Plaform" />
     <MESSAGE value="F1" />
     <MESSAGE value="?" />
-    <option name="LAST_COMMIT_MESSAGE" value="?" />
+    <MESSAGE value="nn" />
+    <option name="LAST_COMMIT_MESSAGE" value="nn" />
   </component>
 </project>
