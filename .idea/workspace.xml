@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5c90429-d6a9-4bdc-b47e-9cd7b0a8d62b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/World-01/level11.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/World-01/level11.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/level10.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/level10.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +52,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://D:/duan1/Assets/Scenes/Open/Stagelevel.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/duan1/Assets/Scenes/World-01/level11.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/duan1/Assets/Scenes/level10.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/duan1/Assets/Sprte/01-CatBird-Sprite/Button/12sprite-1001-2.png.meta" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -92,7 +94,7 @@
       <workItem from="1742980311846" duration="3203000" />
       <workItem from="1743059594293" duration="257000" />
       <workItem from="1743153026155" duration="2519000" />
-      <workItem from="1743412372627" duration="1653000" />
+      <workItem from="1743412372627" duration="2738000" />
     </task>
     <task id="LOCAL-00001" summary="capnhap">
       <option name="closed" value="true" />
