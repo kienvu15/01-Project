@@ -208,5 +208,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lockdoor:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 6369927593555716334, guid: a86752a9b5393aa48b41a1311baf0cd1, type: 3}
+  - {fileID: 6369927593555716334, guid: a86752a9b5393aa48b41a1311baf0cd1, type: 3}
+  delayBetweenDoors: 1

@@ -10,13 +10,15 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DpaMonitoringSettings">
-    <option name="firstShow" value="false" />
-  </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="vandai" />
+    <option name="BRANCH" value="origin/main" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -28,30 +30,11 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/kienvu15/01-Project.git&quot;,
-    &quot;accountId&quot;: &quot;2676c1ba-94c8-4ead-88fc-389f6f1a8909&quot;
+    &quot;accountId&quot;: &quot;ad491949-9b8f-408c-9db4-44c953760ac5&quot;
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/fleck/Videos/01-Project/Assets/Prefab/01-Cat-Bird.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fleck/Videos/01-Project/Assets/Prefab/01-Cat-Bird.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fleck/Videos/01-Project/Assets/Prefab/FallTrap/Fall-Spike.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fleck/Videos/01-Project/Assets/Prefab/Finish-Portal.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fleck/Videos/01-Project/Assets/Scenes/Done/level11.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fleck/Videos/01-Project/Assets/Scenes/Level 11.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fleck/Videos/01-Project/Assets/Scenes/Level 12.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fleck/Videos/01-Project/Assets/Scenes/Level 13.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fleck/Videos/01-Project/Assets/Scenes/Level 14.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fleck/Videos/01-Project/Assets/Scenes/Level 15.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fleck/Videos/01-Project/Assets/Sprte/01-CatBird-Sprite/Trap/sprite-568-0.png.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fleck/Videos/01-Project/Assets/Sprte/01-CatBird-Sprite/Trap/sprite-568-1.png.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fleck/Videos/01-Project/Assets/Tilemap/01/New Tile Palette.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fleck/Videos/01-Project/Assets/Tilemap/01/New Tile Palette.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fleck/Videos/01-Project/Assets/Tilemap/01/New Tile Palette.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fleck/Videos/01-Project/Assets/Tilemap/01/New Tile Palette.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fleck/Videos/01-Project/Assets/Tilemap/01/New Tile Palette.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fleck/Videos/01-Project/Assets/Tilemap/01/New Tile Palette.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fleck/Videos/01-Project/Assets/Tilemap/01/New Tile Palette.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/fleck/Videos/01-Project/Assets/Tilemap/01/New Tile Palette.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/chiennguyen/RiderProjects/01-Project/Assets/Scenes/Level 12.unity" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -65,10 +48,9 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;bachien189&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -81,7 +63,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.30f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/6000.0.30f1/Unity.app/Contents/MacOS/Unity" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\fleck\Videos\01-Project -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\fleck\Videos\01-Project" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -89,7 +71,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.30f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/6000.0.30f1/Unity.app/Contents/MacOS/Unity" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\fleck\Videos\01-Project -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\fleck\Videos\01-Project" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -144,13 +126,12 @@
       <workItem from="1741841150000" duration="126000" />
       <workItem from="1741848012347" duration="431000" />
       <workItem from="1741850049443" duration="8000" />
-      <workItem from="1742379889687" duration="52000" />
-      <workItem from="1742549538036" duration="1380000" />
-      <workItem from="1742979915376" duration="235000" />
-      <workItem from="1742980248974" duration="161000" />
-      <workItem from="1742980436156" duration="362000" />
-      <workItem from="1742981584788" duration="2429000" />
-      <workItem from="1743152812973" duration="1013000" />
+      <workItem from="1743136339801" duration="89000" />
+      <workItem from="1743153978354" duration="96000" />
+      <workItem from="1743156022221" duration="23000" />
+      <workItem from="1743156278802" duration="990000" />
+      <workItem from="1743159958770" duration="89000" />
+      <workItem from="1743413578300" duration="37000" />
     </task>
     <task id="LOCAL-00001" summary="comment tesst">
       <option name="closed" value="true" />
@@ -368,15 +349,47 @@
       <option name="project" value="LOCAL" />
       <updated>1741848066452</updated>
     </task>
-    <task id="LOCAL-00028" summary="?">
+    <task id="LOCAL-00028" summary="1">
       <option name="closed" value="true" />
-      <created>1743050452816</created>
+      <created>1742374889224</created>
       <option name="number" value="00028" />
       <option name="presentableId" value="LOCAL-00028" />
       <option name="project" value="LOCAL" />
-      <updated>1743050452816</updated>
+      <updated>1742374889224</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="chien1">
+      <option name="closed" value="true" />
+      <created>1743154007947</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1743154007947</updated>
+    </task>
+    <task id="LOCAL-00030" summary="111">
+      <option name="closed" value="true" />
+      <created>1743156030509</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1743156030509</updated>
+    </task>
+    <task id="LOCAL-00031" summary="111">
+      <option name="closed" value="true" />
+      <created>1743159977604</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1743159977604</updated>
+    </task>
+    <task id="LOCAL-00032" summary="111">
+      <option name="closed" value="true" />
+      <created>1743413601252</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1743413601252</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -390,33 +403,8 @@
     <option name="unityProjectFolder" value="true" />
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="vandai" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="08" />
-    <MESSAGE value="07" />
     <MESSAGE value="007" />
     <MESSAGE value="110" />
     <MESSAGE value="220" />
@@ -439,7 +427,9 @@
     <MESSAGE value="Chain Saw" />
     <MESSAGE value="Fall Plaform" />
     <MESSAGE value="F1" />
-    <MESSAGE value="?" />
-    <option name="LAST_COMMIT_MESSAGE" value="?" />
+    <MESSAGE value="1" />
+    <MESSAGE value="chien1" />
+    <MESSAGE value="111" />
+    <option name="LAST_COMMIT_MESSAGE" value="111" />
   </component>
 </project>
