@@ -89,6 +89,7 @@
       <workItem from="1742980093785" duration="179000" />
       <workItem from="1742980311846" duration="3203000" />
       <workItem from="1743059594293" duration="257000" />
+      <workItem from="1743587052216" duration="744000" />
     </task>
     <task id="LOCAL-00001" summary="capnhap">
       <option name="closed" value="true" />
@@ -135,7 +136,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/main" />
+                        <option value="vandai" />
                       </list>
                     </value>
                   </entry>
