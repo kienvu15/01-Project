@@ -453,6 +453,8 @@ public class PlayerController : MonoBehaviour
 
         yield return new WaitForSeconds(0.2f); // Đợi một chút trước khi reset tất cả
 
+        PLBossManager.Instance.ResetAllBosses();
+        OpenManager.Instance.ResetAll();
         // Kiểm tra null trước khi gọi Reset
         if (FallBrickManager.Instance != null)
             FallBrickManager.Instance.ResetAllBricks();
@@ -469,8 +471,7 @@ public class PlayerController : MonoBehaviour
         if (SoftBlockManager.Instance != null)
             SoftBlockManager.Instance.ResetAllSoftBlocks();
 
-        foreach (PLboss boss in bosses)
-            boss.ResetBoss();
+        
 
         foreach (Runenemy enemy in enemies)
             enemy.ResetEnemy();

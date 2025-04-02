@@ -62,5 +62,6 @@ public class PLboss : MonoBehaviour
         rb.bodyType = initialBodyType;
         count = 0;
         gameObject.SetActive(true);
+        anim.Play("Idle");
     }
 }
