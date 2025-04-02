@@ -5,44 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5c90429-d6a9-4bdc-b47e-9cd7b0a8d62b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/Boss-PL/Die.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/Boss-PL/Die.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/OpenManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/OpenManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PLBossManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PLBossManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Materials 1.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Materials 1/sprite-786-0.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Materials 1/sprite-786-0.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprte/Background/Materials.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprte/Background/Materials/Layer_0004_Lights.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprte/Background/Materials/Layer_0004_Lights.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprte/Background/Materials/Layer_0007_Lights.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprte/Background/Materials/Layer_0007_Lights.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.01-Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.01-Project/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Enemy/Jump/Jump-Enemy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Enemy/Jump/Jump-Enemy.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Trap/Saw,pike,Chain/shake4.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Trap/Saw,pike,Chain/shake4.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Crow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Crow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Enemies/Jump/Jump-Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Enemies/Jump/Jump-Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/FallTrap/sprite-31-0_0.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/FallTrap/Spike.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/FallTrap/sprite-31-0_0.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/FallTrap/Spike.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 14.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 14.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 15.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/level15.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 15.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/level15.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/World-01/level03.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/World-01/level03.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scrpits/BossJump.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scrpits/BossJump.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scrpits/PLboss.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scrpits/PLboss.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scrpits/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scrpits/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Enemy/sprite-720-5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Enemy/sprite-720-5.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Enemy/sprite-720-6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Enemy/sprite-720-6.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Items/sprite-1037-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Items/sprite-1037-0.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Items/sprite-1260-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Items/sprite-1260-0.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Trap/Muti-sprite-104-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Trap/Muti-sprite-104-0.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/sprite-1045-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/sprite-1045-0.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/sprite-759-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/sprite-759-0.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="main" />
+    <option name="BRANCH" value="origin/main" />
   </component>
   <component name="Git.Settings">
     <favorite-branches>
@@ -89,6 +52,12 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://D:/duan1/Assets/Animation/Trap/Saw,pike,Chain/shake4.anim" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/duan1/Assets/Animation/Trap/Saw,pike,Chain/shake4.anim" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/duan1/Assets/Animation/Trap/Saw,pike,Chain/shake4.anim" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/duan1/Assets/Animation/Trap/Saw,pike,Chain/shake4.anim" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/duan1/Assets/Animation/Trap/Saw,pike,Chain/shake4.anim" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/duan1/Assets/Animation/Trap/Saw,pike,Chain/shake4.anim" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/duan1/ProjectSettings/TagManager.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/duan1/ProjectSettings/TagManager.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/duan1/ProjectSettings/TagManager.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/duan1/ProjectSettings/TagManager.asset" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -106,7 +75,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Merging vandai",
+    "git-widget-placeholder": "vandai",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
