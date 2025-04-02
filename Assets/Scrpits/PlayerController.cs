@@ -453,8 +453,12 @@ public class PlayerController : MonoBehaviour
 
         yield return new WaitForSeconds(0.2f); // Đợi một chút trước khi reset tất cả
 
-        PLBossManager.Instance.ResetAllBosses();
-        OpenManager.Instance.ResetAll();
+        if (PLBossManager.Instance != null)
+            PLBossManager.Instance.ResetAllBosses();
+
+        if (OpenManager.Instance != null)
+            OpenManager.Instance.ResetAll();
+
         // Kiểm tra null trước khi gọi Reset
         if (FallBrickManager.Instance != null)
             FallBrickManager.Instance.ResetAllBricks();
