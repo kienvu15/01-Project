@@ -2,7 +2,11 @@
 
 public class BossJump : MonoBehaviour
 {
+    Animator anim;
     private Rigidbody2D rb;
+    PolygonCollider2D PolygonCollider2D;
+
+
     private bool isGround;
     private bool moveLeft;
     private Vector3 initialPosition; // Lưu vị trí ban đầu
@@ -17,9 +21,14 @@ public class BossJump : MonoBehaviour
     public AwareBoss AwareBoss;
     public GameObject Player;
 
+    public bool die = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+        PolygonCollider2D = GetComponent<PolygonCollider2D>();
+
         initialPosition = transform.position; // Lưu vị trí ban đầu
         initialState = AwareBoss.canJumpeh;  // Lưu trạng thái ban đầu
     }
@@ -60,8 +69,50 @@ public class BossJump : MonoBehaviour
     // Hàm reset lại Boss khi người chơi respawn
     public void ResetBoss()
     {
-        transform.position = initialPosition; // Reset vị trí về ban đầu
-        AwareBoss.canJumpeh = initialState;  // Reset trạng thái
-        rb.linearVelocity = Vector2.zero; // Dừng mọi chuyển động
+        transform.position = initialPosition; 
+        AwareBoss.canJumpeh = initialState;  
+        rb.linearVelocity = Vector2.zero;
+        PolygonCollider2D.enabled = true;
+
+        Animator anim = GetComponent<Animator>();
+        if (anim != null)
+        {
+            anim.Play("New Animation");
+        }
+
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.sortingLayerName = "Player"; // Thay bằng tên sorting layer bạn muốn
+            spriteRenderer.sortingOrder = 1; // Đặt order nhỏ hơn để bị đẩy ra sau
+        }
+
+        Debug.Log("Boss has been reset!");
     }
+
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (rb.IsTouchingLayers(LayerMask.GetMask("Water")))
+        {
+            rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+            anim.Play("Die");
+            rb.linearVelocity = Vector2.zero;
+            PolygonCollider2D.enabled = false;
+            Debug.Log("Enemy Died in Water...");
+
+            // Đổi Sorting Layer và Order in Layer
+            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+            if (spriteRenderer != null)
+            {
+                spriteRenderer.sortingLayerName = "Player"; // Thay bằng tên sorting layer bạn muốn
+                spriteRenderer.sortingOrder = 3; // Đặt order nhỏ hơn để bị đẩy ra sau
+            }
+
+            anim.Play("Die");
+            die = true;
+            return;
+        }
+    }
+
 }

@@ -121,15 +121,16 @@ public class PlayerController : MonoBehaviour
         DustO();
         
     }
-    public float rayLength = 3f;
+
+    public float rayLength = 0.52f;
     private bool Grounded()
     {
-         // Chiều dài tia raycast
         Vector2 rayOrigin = transform.position; // Điểm bắn tia
-        Vector2 rayDirection = Vector2.down; // Hướng xuống
+        Vector2 rayDirection = Vector2.down;   // Hướng xuống
 
-        // Bắn tia Raycast
-        RaycastHit2D hit = Physics2D.Raycast(rayOrigin, rayDirection, rayLength, LayerMask.GetMask("Ground"));
+        // Bắn tia Raycast kiểm tra cả "Ground" và "Ground2"
+        int groundLayers = LayerMask.GetMask("Ground", "Ground2");
+        RaycastHit2D hit = Physics2D.Raycast(rayOrigin, rayDirection, rayLength, groundLayers);
 
         // Vẽ raycast để quan sát trong Scene
         Color rayColor = (hit.collider != null) ? Color.green : Color.red; // Xanh nếu chạm, đỏ nếu không chạm
@@ -149,7 +150,6 @@ public class PlayerController : MonoBehaviour
 
         return grounded;
     }
-
 
     public void Move()
     {
@@ -453,6 +453,12 @@ public class PlayerController : MonoBehaviour
 
         yield return new WaitForSeconds(0.2f); // Đợi một chút trước khi reset tất cả
 
+        if (PLBossManager.Instance != null)
+            PLBossManager.Instance.ResetAllBosses();
+
+        if (OpenManager.Instance != null)
+            OpenManager.Instance.ResetAll();
+
         // Kiểm tra null trước khi gọi Reset
         if (FallBrickManager.Instance != null)
             FallBrickManager.Instance.ResetAllBricks();
@@ -469,8 +475,7 @@ public class PlayerController : MonoBehaviour
         if (SoftBlockManager.Instance != null)
             SoftBlockManager.Instance.ResetAllSoftBlocks();
 
-        foreach (PLboss boss in bosses)
-            boss.ResetBoss();
+        
 
         foreach (Runenemy enemy in enemies)
             enemy.ResetEnemy();
