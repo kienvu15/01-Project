@@ -808,7 +808,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8533837468605900803, guid: 4b26ddfa46dfcec488b82293118c2675, type: 3}
       propertyPath: moveSpeed
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8533837468605900803, guid: 4b26ddfa46dfcec488b82293118c2675, type: 3}
       propertyPath: movePoints.Array.size
@@ -11380,7 +11380,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8533837468605900803, guid: 4b26ddfa46dfcec488b82293118c2675, type: 3}
       propertyPath: moveSpeed
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8533837468605900803, guid: 4b26ddfa46dfcec488b82293118c2675, type: 3}
       propertyPath: movePoints.Array.size
