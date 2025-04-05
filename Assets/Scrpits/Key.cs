@@ -8,6 +8,9 @@ public class Key : MonoBehaviour
     private bool isUsed = false; // Trạng thái đã sử dụng
     public float delayBetweenDoors = 1f; // Độ trễ giữa mỗi lần mở cửa
 
+    public AudioSource audioSource;
+    [SerializeField] AudioClip itemCollect;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -18,6 +21,7 @@ public class Key : MonoBehaviour
     {
         if (collision.CompareTag("Player") && !isUsed)
         {
+            audioSource.PlayOneShot(itemCollect);
             isUsed = true;
             anim.Play("KeyDisapear");
 

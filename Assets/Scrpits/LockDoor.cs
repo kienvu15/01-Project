@@ -4,6 +4,10 @@ public class LockDoor : MonoBehaviour
 {
     private Animator anim;
 
+    [Header("SoundEF")]
+    public AudioSource audioSource;
+    [SerializeField] AudioClip jumpSound;
+
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -15,6 +19,7 @@ public class LockDoor : MonoBehaviour
         if (anim != null)
         {
             anim.SetTrigger("Open"); // Đảm bảo Animation Controller có parameter "Open"
+            
         }
         else
         {
@@ -22,9 +27,15 @@ public class LockDoor : MonoBehaviour
         }
     }
 
+    public void ONsounf()
+    {
+        audioSource.PlayOneShot(jumpSound);
+    }
+
     public void Deactivate()
     {
         gameObject.SetActive(false);
+        
     }
 
     public void Actice()

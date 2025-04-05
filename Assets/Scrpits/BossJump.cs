@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Audio;
 
 public class BossJump : MonoBehaviour
 {
@@ -22,6 +23,11 @@ public class BossJump : MonoBehaviour
     public GameObject Player;
 
     public bool die = false;
+
+    [Header("SoundEF")]
+    public AudioSource audioSource;
+    [SerializeField] AudioClip jumpSound;
+    
 
     void Start()
     {
@@ -63,6 +69,7 @@ public class BossJump : MonoBehaviour
             float horizontalMove = moveLeft ? -moveForce : moveForce;
             rb.linearVelocity = new Vector2(horizontalMove, jumpForce);
             Instantiate(DustBlast, Foot.position, Quaternion.Euler(0, 0, 90));
+            audioSource.PlayOneShot(jumpSound);
         }
     }
 

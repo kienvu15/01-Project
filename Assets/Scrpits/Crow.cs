@@ -1,10 +1,14 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Crow : MonoBehaviour
 {
     Animator animator;
     CircleCollider2D CircleCollider2D;
     public FlashEffect flashEffect;
+
+    public AudioSource audioSource;
+    [SerializeField] AudioClip itemCollect;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,6 +25,7 @@ public class Crow : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            audioSource.PlayOneShot(itemCollect);
             animator.Play("crow2");
             StartCoroutine(flashEffect.StartFlash());
         }

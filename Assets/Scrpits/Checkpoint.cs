@@ -8,6 +8,10 @@ public class Checkpoint : MonoBehaviour
     private bool isActivated = false;
     public GameObject DustBlast;
     public FlashEffect flashEffect;
+
+    public AudioSource audioSource;
+    [SerializeField] AudioClip checkPoint;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -19,6 +23,7 @@ public class Checkpoint : MonoBehaviour
     {
         if (!isActivated && collision.CompareTag("Player"))
         {
+            audioSource.PlayOneShot(checkPoint);
             Instantiate(DustBlast, rb.transform.position, Quaternion.Euler(0, 0, 90));
             StartCoroutine(flashEffect.StartFlash());
             PlayerController player = collision.GetComponent<PlayerController>();

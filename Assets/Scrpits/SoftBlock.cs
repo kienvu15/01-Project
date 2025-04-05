@@ -11,6 +11,9 @@ public class SoftBlock : MonoBehaviour
     [SerializeField] private float fallDelay = 1f;
     [SerializeField] private float destroyDelay = 2f;
 
+    public AudioSource audioSource;
+    [SerializeField] AudioClip breakSound;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -30,6 +33,11 @@ public class SoftBlock : MonoBehaviour
         }
     }
 
+    public void ONsounf()
+    {
+        audioSource.PlayOneShot(breakSound);
+
+    }
     public void DeActive()
     {
         boxCollider.enabled = false;

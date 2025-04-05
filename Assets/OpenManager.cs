@@ -47,10 +47,16 @@ public class OpenManager : MonoBehaviour
         {
             if (door != null)
             {
-                door.Deactivate();
+                // Gọi animation thay vì vô hiệu hóa
+                Animator doorAnim = door.GetComponent<Animator>();
+                if (doorAnim != null)
+                {
+                    doorAnim.Play("LockDoorDisappear"); // Thay bằng tên animation của bạn
+                }
             }
         }
     }
+
 
     public void DeactivateBox()
     {

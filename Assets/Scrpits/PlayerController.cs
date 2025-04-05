@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour
     public GridSpawner gridSpawner;
     public Transform respawnPoint;
     
-    public Runenemy[] enemies;
     public PLboss[] bosses;
     public BossJump BossJump;
 
@@ -32,7 +31,10 @@ public class PlayerController : MonoBehaviour
 
     [Header("SoundEF")]
     [SerializeField] AudioClip jumpSound;
-    [SerializeField] AudioClip moveSound;
+    [SerializeField] AudioClip dieSound;
+    [SerializeField] AudioClip moveSound; 
+    [SerializeField] AudioClip nextLevel;
+    [SerializeField] AudioClip app;
     [Space(5)]
 
     [Header("Movement")]
@@ -93,6 +95,11 @@ public class PlayerController : MonoBehaviour
         anim.Play("Appear");
         yield return new WaitForSeconds(0.3f);
         anim.SetBool("Fall", true);
+    }
+
+    public void SoundAppear()
+    {
+        audioSource.PlayOneShot(app);
     }
 
     void UpdateDeathUI()
@@ -351,6 +358,8 @@ public class PlayerController : MonoBehaviour
         if (collision.CompareTag("Portal"))
         {
             Debug.Log("🔄 Teleporting...");
+            audioSource.PlayOneShot(nextLevel);
+            anim.Play("Spin");
             playerController.enabled = false;
             rb.linearVelocity = Vector2.zero;
             rb.bodyType = RigidbodyType2D.Kinematic;
@@ -360,6 +369,7 @@ public class PlayerController : MonoBehaviour
         if (collision.CompareTag("Enemies"))
         {
             StartCoroutine(flashEffect.StartFlash());
+            audioSource.PlayOneShot(dieSound);
             Debug.Log("Player hit an enemy!");
             anim.SetBool("Die", true);
             anim.SetBool("Jump", false);
@@ -381,7 +391,7 @@ public class PlayerController : MonoBehaviour
     {
         transform.position = PortalFinish.transform.position;
         yield return StartCoroutine(flashEffect.StartFlash());
-        anim.Play("Spin");
+        
         StartCoroutine(gridSpawner.SpawnGrid());
     }
 
@@ -391,6 +401,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemies") && !isDead)
         {
             StartCoroutine(flashEffect.StartFlash());
+            audioSource.PlayOneShot(dieSound);
             Debug.Log("Player hit an enemy!");
             anim.SetBool("Die", true);
             anim.SetBool("Jump", false);
@@ -407,11 +418,34 @@ public class PlayerController : MonoBehaviour
         rb.AddForce(new Vector2(0, 15f), ForceMode2D.Impulse);
         myBodyCollider.enabled = false;
         StartCoroutine(Respawn());
+
+        if (BoxManager.Instance != null)
+            BoxManager.Instance.ResetAllBoxes();
+
+        if (FallBrickManager.Instance != null)
+            FallBrickManager.Instance.ResetAllBricks();
+
+        if (LockDoorManager.Instance != null)
+            LockDoorManager.Instance.ResetAllDoors();
+
+        if (KeyManager.Instance != null)
+            KeyManager.Instance.ResetAllKeys();
+
+        if (SoftBlockManager.Instance != null)
+            SoftBlockManager.Instance.ResetAllSoftBlocks();
+
+        if (OpenManager.Instance != null)
+            OpenManager.Instance.ResetAll();
+
+        if (RunEnemyManager.Instance != null)
+            RunEnemyManager.Instance.ResetAllEnemies();
     }
     public bool respawn = false;
+    
     private IEnumerator Respawn()
     {
         respawn = true;
+
         GameObject tempGround = new GameObject("TempGround");
         tempGround.transform.position = respawnPoint.position + new Vector3(0, -1, 0);
         BoxCollider2D tempCollider = tempGround.AddComponent<BoxCollider2D>();
@@ -420,7 +454,7 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(0.5f); // Đợi một chút để nhân vật ổn định
         Destroy(tempGround); // Xóa nền tạm thời
         GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
-
+        
         deathCount++;
         PlayerPrefs.SetInt("DeathCount", deathCount);
         PlayerPrefs.Save();
@@ -450,31 +484,17 @@ public class PlayerController : MonoBehaviour
         isDead = false;
         anim.SetBool("Die", false);
         anim.Play("Idle");
-
+        audioSource.PlayOneShot(app);
         yield return new WaitForSeconds(0.2f); // Đợi một chút trước khi reset tất cả
 
         PLBossManager.Instance.ResetAllBosses();
-        OpenManager.Instance.ResetAll();
+        
         // Kiểm tra null trước khi gọi Reset
-        if (FallBrickManager.Instance != null)
-            FallBrickManager.Instance.ResetAllBricks();
 
-        if (LockDoorManager.Instance != null)
-            LockDoorManager.Instance.ResetAllDoors();
 
-        if (KeyManager.Instance != null)
-            KeyManager.Instance.ResetAllKeys();
-
-        if (BoxManager.Instance != null)
-            BoxManager.Instance.ResetAllBoxes();
-
-        if (SoftBlockManager.Instance != null)
-            SoftBlockManager.Instance.ResetAllSoftBlocks();
 
         
 
-        foreach (Runenemy enemy in enemies)
-            enemy.ResetEnemy();
 
         if (BossJump != null)
             BossJump.ResetBoss();

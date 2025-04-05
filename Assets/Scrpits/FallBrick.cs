@@ -13,6 +13,10 @@ public class FallBrick : MonoBehaviour
     public Transform point2;
     public GameObject aware;
 
+    public AudioSource audioSource;
+    [SerializeField] AudioClip Fall;
+    [SerializeField] AudioClip Land;
+
     // Lưu trạng thái ban đầu
     private Vector3 initialPosition;
     private Quaternion initialRotation;
@@ -52,11 +56,15 @@ public class FallBrick : MonoBehaviour
         Instantiate(DustBlast2, point2.position, Quaternion.identity);
     }
 
-
+    public void Osnund()
+    {
+        audioSource.PlayOneShot(Fall);
+    }
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
+            audioSource.PlayOneShot(Land);
             body.bodyType = RigidbodyType2D.Static;
             animator.enabled = false;
         }

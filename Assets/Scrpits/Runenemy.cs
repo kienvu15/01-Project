@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using Unity.Collections;
 using UnityEngine;
+using static UnityEditor.Recorder.OutputPath;
 
 public class Runenemy : MonoBehaviour
 {
@@ -27,6 +28,13 @@ public class Runenemy : MonoBehaviour
     private Vector3 startPosition;
     private Quaternion startRotation;
 
+    public GameObject What;
+    public Transform head;
+
+    public AudioSource audioSource;
+    [SerializeField] AudioClip WhatSound;
+    [SerializeField] AudioClip Die;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -36,6 +44,9 @@ public class Runenemy : MonoBehaviour
 
         startPosition = transform.position;
         startRotation = transform.rotation;
+
+        RunEnemyManager.Instance?.RegisterEnemy(this);
+
     }
 
     void Update()
@@ -61,6 +72,11 @@ public class Runenemy : MonoBehaviour
         }
     }
 
+    public void Osnund()
+    {
+        audioSource.PlayOneShot(WhatSound);
+
+    }
     public void ResetEnemy()
     {
         boxCollider.enabled = true;
@@ -80,6 +96,19 @@ public class Runenemy : MonoBehaviour
         anim.Play("Idle");
         gameObject.SetActive(true);
     }
+
+    public void OnWhat()
+    {
+        GameObject go = Instantiate(What, head.position, Quaternion.identity);
+        StartCoroutine(AutoHide(go, 0.3f)); // Tắt sau 1.5 giây
+    }
+
+    IEnumerator AutoHide(GameObject obj, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        obj.SetActive(false);
+    }
+
 
     public void OnPlayerEnterAware()
     {
@@ -115,6 +144,7 @@ public class Runenemy : MonoBehaviour
         {
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             anim.Play("Die");
+            audioSource.PlayOneShot(Die);
             rb.linearVelocity = Vector2.zero;
             boxCollider.enabled = false;
             circleCollider.enabled = false;

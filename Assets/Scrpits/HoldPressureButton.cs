@@ -7,6 +7,9 @@ public class HoldPressureButton : MonoBehaviour
     public GameObject[] lockdoor; // Danh sách cửa của key này
     private bool isUsed = false; // Trạng thái đã sử dụng
 
+    public AudioSource audioSource;
+    [SerializeField] AudioClip buttonClicked;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -17,6 +20,7 @@ public class HoldPressureButton : MonoBehaviour
         if (!collision.CompareTag("Untagged")) // Tránh kích hoạt bởi các object không mong muốn
         {
             objectCount++;
+            audioSource.PlayOneShot(buttonClicked);
             anim.Play("ButtonPress"); // Chạy animation nhấn nút
             Debug.Log("🔴 Nút bị ấn xuống!");
             isUsed = true;
@@ -39,6 +43,7 @@ public class HoldPressureButton : MonoBehaviour
             if (objectCount <= 0) // Khi tất cả object rời đi
             {
                 anim.Play("Button"); // Quay về trạng thái ban đầu
+                audioSource.PlayOneShot(buttonClicked);
                 Debug.Log("🔵 Nút nhả ra!");
                 isUsed = false;
                 foreach (GameObject door in lockdoor)

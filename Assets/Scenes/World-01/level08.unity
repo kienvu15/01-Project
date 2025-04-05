@@ -2036,7 +2036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BoundingShape2D: {fileID: 0}
+  BoundingShape2D: {fileID: 960808142}
   Damping: 0.5
   SlowingDistance: 5
   OversizeWindow:
@@ -5514,6 +5514,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 9151247704608288539, guid: ab5db603e7f374243acea0838470345d, type: 3}
   m_PrefabInstance: {fileID: 682267959}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &682534882 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9151123346523418186, guid: ac5964d8dbee6ce4a8f77591eeb6b5ae, type: 3}
+  m_PrefabInstance: {fileID: 1978087369}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &706061442
 PrefabInstance:
@@ -13184,7 +13189,7 @@ Transform:
   m_GameObject: {fileID: 962202912}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.97, y: 24.1, z: -10}
+  m_LocalPosition: {x: -13.576112, y: 23.91215, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15518,6 +15523,8 @@ GameObject:
   - component: {fileID: 1233698830}
   - component: {fileID: 1233698829}
   - component: {fileID: 1233698828}
+  - component: {fileID: 1233698839}
+  - component: {fileID: 1233698838}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -15589,7 +15596,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.076
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -15683,10 +15690,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 18753fe6d5230cf4e99455b174d26624, type: 3}
-  m_Resource: {fileID: 8300000, guid: 18753fe6d5230cf4e99455b174d26624, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 576d9e57af648a946866615a23a905b9, type: 3}
+  m_Resource: {fileID: 8300000, guid: 576d9e57af648a946866615a23a905b9, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.131
+  m_Volume: 0.155
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -15859,6 +15866,30 @@ MonoBehaviour:
   flashDuration: 0.3
   flashColor: {r: 1, g: 1, b: 1, a: 1}
   fadeTime: 0.3
+--- !u!114 &1233698838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233698826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3e6cf6b52077945b40cdeebdc10b8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1233698839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233698826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a2488e57776b504eb5641485ea8b94a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1239415340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20462,33 +20493,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1468678321}
     m_Modifications:
-    - target: {fileID: 2177714723878269687, guid: 377608a8e789c4c4983de6ff56e921bc, type: 3}
-      propertyPath: m_SortingLayer
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2177714723878269687, guid: 377608a8e789c4c4983de6ff56e921bc, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -14109871
-      objectReference: {fileID: 0}
-    - target: {fileID: 2234195657857927337, guid: 377608a8e789c4c4983de6ff56e921bc, type: 3}
-      propertyPath: m_Size.x
-      value: 1.08
-      objectReference: {fileID: 0}
     - target: {fileID: 4874822875563073303, guid: 377608a8e789c4c4983de6ff56e921bc, type: 3}
       propertyPath: m_Name
       value: Soft-Block (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6569284703753861798, guid: 377608a8e789c4c4983de6ff56e921bc, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 6569284703753861798, guid: 377608a8e789c4c4983de6ff56e921bc, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 6569284703753861798, guid: 377608a8e789c4c4983de6ff56e921bc, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.06
       objectReference: {fileID: 0}
     - target: {fileID: 6569284703753861798, guid: 377608a8e789c4c4983de6ff56e921bc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20530,13 +20537,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6569284703753861798, guid: 377608a8e789c4c4983de6ff56e921bc, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6605225940525406519, guid: 377608a8e789c4c4983de6ff56e921bc, type: 3}
-      propertyPath: fallDelay
-      value: 2.19
+    - target: {fileID: 7154035371884697242, guid: 377608a8e789c4c4983de6ff56e921bc, type: 3}
+      propertyPath: m_Volume
+      value: 0.033
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21610,14 +21613,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 796078271594529549}
-  flashEffect: {fileID: 0}
-  gridSpawner: {fileID: 0}
+  flashEffect: {fileID: 1233698837}
+  gridSpawner: {fileID: 1233698836}
   respawnPoint: {fileID: 716172309}
   enemies: []
   bosses: []
   BossJump: {fileID: 0}
   jumpSound: {fileID: 8300000, guid: e01a51aa95832914badcea87b283ff90, type: 3}
+  dieSound: {fileID: 8300000, guid: c8164515b63e28e4d8af0d062656a3a4, type: 3}
   moveSound: {fileID: 8300000, guid: 7c5f272a3e02af8429e7c4dfc34d39c8, type: 3}
+  nextLevel: {fileID: 8300000, guid: 00e1a2d34935cbc488f80d8ff4dea35e, type: 3}
   moveSpeed: 3.5
   airMoveSpeed: 5
   footstepInterval: 0.3
@@ -21627,7 +21632,7 @@ MonoBehaviour:
   maxAirJump: 0
   glideGravityScale: 0.1
   fallGravityScale: 2
-  PortalFinish: {fileID: 0}
+  PortalFinish: {fileID: 682534882}
   dust: {fileID: 2707468416265094887}
   Foot: {fileID: 6450455693914239038}
   DustBlast: {fileID: 799534743160302347, guid: 839ef99a179d1ea49b113f38fd735700, type: 3}

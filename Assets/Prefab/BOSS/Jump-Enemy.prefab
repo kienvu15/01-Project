@@ -190,6 +190,9 @@ MonoBehaviour:
   DustBlast: {fileID: 799534743160302347, guid: 839ef99a179d1ea49b113f38fd735700, type: 3}
   AwareBoss: {fileID: 0}
   Player: {fileID: 0}
+  die: 0
+  audioSource: {fileID: 0}
+  jumpSound: {fileID: 0}
 --- !u!60 &6954780680771342331
 PolygonCollider2D:
   m_ObjectHideFlags: 0

@@ -208,6 +208,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CheckPoint
       objectReference: {fileID: 0}
+    - target: {fileID: 6000860738538753157, guid: 83a89fe1073014745b079a7fb8306340, type: 3}
+      propertyPath: flashImage
+      value: 
+      objectReference: {fileID: 93717833}
     - target: {fileID: 6148580609792423762, guid: 83a89fe1073014745b079a7fb8306340, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.6
@@ -247,14 +251,6 @@ PrefabInstance:
     - target: {fileID: 6148580609792423762, guid: 83a89fe1073014745b079a7fb8306340, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9047759909058885216, guid: 83a89fe1073014745b079a7fb8306340, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 9047759909058885216, guid: 83a89fe1073014745b079a7fb8306340, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.39
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3065,7 +3061,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.135
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -19459,7 +19455,9 @@ MonoBehaviour:
   bosses: []
   BossJump: {fileID: 0}
   jumpSound: {fileID: 8300000, guid: e01a51aa95832914badcea87b283ff90, type: 3}
+  dieSound: {fileID: 8300000, guid: c8164515b63e28e4d8af0d062656a3a4, type: 3}
   moveSound: {fileID: 8300000, guid: 7c5f272a3e02af8429e7c4dfc34d39c8, type: 3}
+  nextLevel: {fileID: 8300000, guid: 00e1a2d34935cbc488f80d8ff4dea35e, type: 3}
   moveSpeed: 3.5
   airMoveSpeed: 5
   footstepInterval: 0.3

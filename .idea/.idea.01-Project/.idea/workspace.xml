@@ -18,6 +18,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -151,6 +152,7 @@
       <workItem from="1742980436156" duration="362000" />
       <workItem from="1742981584788" duration="2429000" />
       <workItem from="1743152812973" duration="1013000" />
+      <workItem from="1743590134957" duration="1196000" />
     </task>
     <task id="LOCAL-00001" summary="comment tesst">
       <option name="closed" value="true" />
@@ -399,6 +401,21 @@
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="main" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -409,7 +426,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="vandai" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
