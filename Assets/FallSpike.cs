@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class FallBrick : MonoBehaviour
+public class FallSpike : MonoBehaviour
 {
     private Animator animator;
     private Rigidbody2D body;
@@ -36,13 +36,12 @@ public class FallBrick : MonoBehaviour
         initialRotation = transform.rotation;
         initialBodyType = body.bodyType;
 
-        // Đăng ký vào FallBrickManager
-        FallBrickManager.Instance.RegisterBrick(this);
+        FallSpikeManager.Instance?.RegisterFallSpike(this);
     }
 
     public void OnComlpete()
     {
-        animator.Play("IdleBrick");
+        animator.Play("Spike");
         body.bodyType = RigidbodyType2D.Dynamic;
         body.gravityScale = 1f;
 
@@ -64,16 +63,23 @@ public class FallBrick : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
-            audioSource.PlayOneShot(Land);
+            
             body.bodyType = RigidbodyType2D.Static;
             animator.enabled = false;
         }
         if (collision.gameObject.CompareTag("Player"))
         {
-            animator.Play("Shake");
+            animator.Play("shake4");
         }
     }
 
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            audioSource.PlayOneShot(Land);
+        }
+    }
     // 🛠 Reset lại FallBrick khi Player Respawn
     public void ResetBrick()
     {
@@ -86,7 +92,6 @@ public class FallBrick : MonoBehaviour
 
         // Bật lại Animator nhưng đảm bảo nó không chạy animation trước đó
         animator.enabled = true;
-        animator.Play("IdleBrick", 0, 0f);
         animator.Play("Spike", 0, 0f);
 
         // Reset Collider nếu cần

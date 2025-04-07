@@ -18,6 +18,9 @@ public class PLboss : MonoBehaviour
     private Quaternion initialRotation;
     private RigidbodyType2D initialBodyType;
 
+    public AudioSource audioSource;
+    [SerializeField] AudioClip Clicked;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -36,6 +39,7 @@ public class PLboss : MonoBehaviour
         {
             count++;
             anim.Play("Week");
+            audioSource.PlayOneShot(Clicked);
             Instantiate(dust, point1.transform.position, Quaternion.identity);
             Instantiate(dust2, point2.transform.position, Quaternion.identity);
 

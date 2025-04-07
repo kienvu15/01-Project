@@ -181,6 +181,7 @@ public class Runenemy : MonoBehaviour
         else
         {
             StopMoving();
+
         }
     }
 

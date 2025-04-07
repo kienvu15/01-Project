@@ -27,7 +27,8 @@ public class BossJump : MonoBehaviour
     [Header("SoundEF")]
     public AudioSource audioSource;
     [SerializeField] AudioClip jumpSound;
-    
+    [SerializeField] AudioClip diesound;
+
 
     void Start()
     {
@@ -102,6 +103,7 @@ public class BossJump : MonoBehaviour
     {
         if (rb.IsTouchingLayers(LayerMask.GetMask("Water")))
         {
+            audioSource.PlayOneShot(diesound);
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             anim.Play("Die");
             rb.linearVelocity = Vector2.zero;

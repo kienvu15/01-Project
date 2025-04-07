@@ -439,6 +439,9 @@ public class PlayerController : MonoBehaviour
 
         if (RunEnemyManager.Instance != null)
             RunEnemyManager.Instance.ResetAllEnemies();
+
+        FallSpikeManager.Instance?.ResetAllSpikes();
+
     }
     public bool respawn = false;
     

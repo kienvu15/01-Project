@@ -1513,8 +1513,8 @@ RectTransform:
   m_Children:
   - {fileID: 3681715}
   - {fileID: 1717005800}
-  - {fileID: 2011508418}
   - {fileID: 227161071}
+  - {fileID: 2011508418}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -6557,7 +6557,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.077
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6756,7 +6756,7 @@ MonoBehaviour:
   rows: 8
   spacing: 1.45
   spawnOrigin: {fileID: 1678888594}
-  flashEffect: {fileID: 1678888601}
+  flashEffect: {fileID: 0}
   animationName: OpenTransition
   audioSource: {fileID: 1678888595}
   startSound: {fileID: 8300000, guid: a636e3ab97b443d479c5d7b5f78285b9, type: 3}
@@ -7007,8 +7007,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+      - m_Target: {fileID: 1678888598}
+        m_TargetAssemblyTypeName: SoundLevel, Assembly-CSharp
         m_MethodName: ToggleSound
         m_Mode: 1
         m_Arguments:

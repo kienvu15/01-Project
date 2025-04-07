@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c297d734-de11-44a7-b3c3-4cd552477e78" name="Changes" comment="" />
+    <list default="true" id="c297d734-de11-44a7-b3c3-4cd552477e78" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.01-Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.01-Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Enemies/Enemy-Run.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Enemies/Enemy-Run.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/FallTrap/Fall-Spike.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/FallTrap/Fall-Spike.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/World-01/level11.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/World-01/level11.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/World-01/level12.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/World-01/level12.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scrpits/FallBrick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scrpits/FallBrick.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +22,7 @@
     <option name="firstShow" value="false" />
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="vandai" />
+    <option name="BRANCH" value="origin/vandai" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -153,6 +161,7 @@
       <workItem from="1742981584788" duration="2429000" />
       <workItem from="1743152812973" duration="1013000" />
       <workItem from="1743590134957" duration="1196000" />
+      <workItem from="1743908937928" duration="867000" />
     </task>
     <task id="LOCAL-00001" summary="comment tesst">
       <option name="closed" value="true" />
@@ -386,7 +395,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743497226492</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="?">
+      <option name="closed" value="true" />
+      <created>1743909134774</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1743909134774</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -408,6 +425,16 @@
             <list>
               <RecentGroup>
                 <option name="FILTER_VALUES">
+                  <option value="origin/vandai" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="vandai" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
                   <option value="main" />
                 </option>
               </RecentGroup>
@@ -426,7 +453,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="origin/vandai" />
                       </list>
                     </value>
                   </entry>
@@ -463,8 +490,8 @@
     <MESSAGE value="Chain Saw" />
     <MESSAGE value="Fall Plaform" />
     <MESSAGE value="F1" />
-    <MESSAGE value="?" />
     <MESSAGE value="nn" />
-    <option name="LAST_COMMIT_MESSAGE" value="nn" />
+    <MESSAGE value="?" />
+    <option name="LAST_COMMIT_MESSAGE" value="?" />
   </component>
 </project>
