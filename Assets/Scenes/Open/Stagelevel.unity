@@ -6756,7 +6756,7 @@ MonoBehaviour:
   rows: 8
   spacing: 1.45
   spawnOrigin: {fileID: 1678888594}
-  flashEffect: {fileID: 0}
+  flashEffect: {fileID: 1678888601}
   animationName: OpenTransition
   audioSource: {fileID: 1678888595}
   startSound: {fileID: 8300000, guid: a636e3ab97b443d479c5d7b5f78285b9, type: 3}
