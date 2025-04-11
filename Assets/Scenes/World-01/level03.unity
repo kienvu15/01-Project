@@ -1152,7 +1152,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -31.93294, y: -2.9528499, z: -10}
+  m_LocalPosition: {x: -31.935387, y: -2.9528599, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5043,8 +5043,8 @@ Tilemap:
   - first: {x: -41, y: 1, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 15
-      m_TileSpriteIndex: 18
+      m_TileIndex: 11
+      m_TileSpriteIndex: 7
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -5123,8 +5123,8 @@ Tilemap:
   - first: {x: -33, y: 1, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 12
-      m_TileSpriteIndex: 6
+      m_TileIndex: 11
+      m_TileSpriteIndex: 7
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -6004,15 +6004,15 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 8d2cdfc75c2aa924daecce5c3e98ecb7, type: 2}
   - m_RefCount: 6
     m_Data: {fileID: 11400000, guid: 30639353c42fbdd48a2a91b9e0fcdf14, type: 2}
-  - m_RefCount: 45
+  - m_RefCount: 47
     m_Data: {fileID: 11400000, guid: 3792de7c982be0243b3e0ceac108e3fd, type: 2}
-  - m_RefCount: 3
+  - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 673a343377e3d4d4eb47e155e3a72e1a, type: 2}
   - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 0e56388b141106141b0210b489b630e3, type: 2}
   - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: ed0c5eb29a0255e4b908ba01d6bab7b9, type: 2}
-  - m_RefCount: 3
+  - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 47c870b3bda86244cb78a868f6ba7f13, type: 2}
   - m_RefCount: 10
     m_Data: {fileID: 11400000, guid: 73eb111d573d48a43aedf7ae8fe2c558, type: 2}
@@ -6059,9 +6059,9 @@ Tilemap:
     m_Data: {fileID: 1790129321, guid: 3fc1ec34153f57d48ae8a58d44463b31, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: -673416775, guid: 3fc1ec34153f57d48ae8a58d44463b31, type: 3}
-  - m_RefCount: 3
+  - m_RefCount: 2
     m_Data: {fileID: 1030531540, guid: 3fc1ec34153f57d48ae8a58d44463b31, type: 3}
-  - m_RefCount: 45
+  - m_RefCount: 47
     m_Data: {fileID: -55292730, guid: 3fc1ec34153f57d48ae8a58d44463b31, type: 3}
   - m_RefCount: 6
     m_Data: {fileID: 328142186, guid: 3fc1ec34153f57d48ae8a58d44463b31, type: 3}
@@ -6083,7 +6083,7 @@ Tilemap:
     m_Data: {fileID: 345151290, guid: 3fc1ec34153f57d48ae8a58d44463b31, type: 3}
   - m_RefCount: 11
     m_Data: {fileID: -1756121942, guid: 3fc1ec34153f57d48ae8a58d44463b31, type: 3}
-  - m_RefCount: 3
+  - m_RefCount: 2
     m_Data: {fileID: 782861018, guid: 3fc1ec34153f57d48ae8a58d44463b31, type: 3}
   - m_RefCount: 9
     m_Data: {fileID: 763536616, guid: 3fc1ec34153f57d48ae8a58d44463b31, type: 3}
@@ -9718,8 +9718,6 @@ MonoBehaviour:
   flashEffect: {fileID: 645701765}
   gridSpawner: {fileID: 645701764}
   respawnPoint: {fileID: 1180344724}
-  bosses: []
-  BossJump: {fileID: 0}
   jumpSound: {fileID: 8300000, guid: e01a51aa95832914badcea87b283ff90, type: 3}
   dieSound: {fileID: 8300000, guid: c8164515b63e28e4d8af0d062656a3a4, type: 3}
   moveSound: {fileID: 8300000, guid: 7c5f272a3e02af8429e7c4dfc34d39c8, type: 3}
