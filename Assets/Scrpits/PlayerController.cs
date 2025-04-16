@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour
     public GridSpawner gridSpawner;
     public Transform respawnPoint;
     
-    public PLboss[] bosses;
     public BossJump BossJump;
 
     
@@ -441,7 +440,7 @@ public class PlayerController : MonoBehaviour
             RunEnemyManager.Instance.ResetAllEnemies();
 
         FallSpikeManager.Instance?.ResetAllSpikes();
-
+  
     }
     public bool respawn = false;
     

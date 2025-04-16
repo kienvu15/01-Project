@@ -1822,6 +1822,15 @@ GameObject:
   - component: {fileID: 527772843}
   - component: {fileID: 527772849}
   - component: {fileID: 527772850}
+  - component: {fileID: 527772859}
+  - component: {fileID: 527772858}
+  - component: {fileID: 527772857}
+  - component: {fileID: 527772856}
+  - component: {fileID: 527772855}
+  - component: {fileID: 527772854}
+  - component: {fileID: 527772853}
+  - component: {fileID: 527772852}
+  - component: {fileID: 527772851}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2137,6 +2146,117 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e995d6c270f97e408281fc15f3951ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &527772851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527772841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3e6cf6b52077945b40cdeebdc10b8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &527772852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527772841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e995d6c270f97e408281fc15f3951ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &527772853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527772841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 024f914f8011e9245a780b11f4dc5d76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &527772854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527772841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b10de599b741b9047bca62296312930c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doors: []
+  box: {fileID: 0}
+  BossJump: {fileID: 0}
+--- !u!114 &527772855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527772841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 503325845f2b26c47ba1768bc9c55c72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &527772856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527772841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 285a3eb2f4e52994ebf211bbdc6b4225, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &527772857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527772841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80d4b56c946f7594d821e47b46a15807, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &527772858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527772841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a2488e57776b504eb5641485ea8b94a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &527772859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527772841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e1fc55c0059f3a48be020d3c901cdd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &528448887

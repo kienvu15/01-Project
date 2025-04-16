@@ -5959,6 +5959,8 @@ GameObject:
   - component: {fileID: 1511650481}
   - component: {fileID: 1511650483}
   - component: {fileID: 1511650484}
+  - component: {fileID: 1511650486}
+  - component: {fileID: 1511650485}
   m_Layer: 0
   m_Name: GameManager (1)
   m_TagString: Untagged
@@ -6348,6 +6350,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e995d6c270f97e408281fc15f3951ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1511650485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511650468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 024f914f8011e9245a780b11f4dc5d76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1511650486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511650468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b10de599b741b9047bca62296312930c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doors: []
+  box: {fileID: 0}
+  BossJump: {fileID: 0}
 --- !u!4 &1546539052 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 606748516349917299, guid: a75e85adc843dca48a03a40431f8f2de, type: 3}
