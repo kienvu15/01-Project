@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d5c90429-d6a9-4bdc-b47e-9cd7b0a8d62b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 14.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 14.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Platform/sprite-621-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprte/01-CatBird-Sprite/Platform/sprite-621-0.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/bachien189" />
+    <option name="BRANCH" value="main" />
   </component>
   <component name="Git.Settings">
     <favorite-branches>
@@ -51,8 +49,14 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://D:/duan1/Assets/Scenes/level10.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/duan1/Assets/Scenes/level10.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/duan1/Assets/Resources.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/duan1/Assets/Resources.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/duan1/Assets/Resources/PerformanceTestRunInfo.json.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/duan1/Assets/Resources/PerformanceTestRunInfo.json.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/duan1/Assets/Resources/PerformanceTestRunInfo.json.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/duan1/Assets/Resources/PerformanceTestRunInfo.json.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/duan1/Assets/Resources/PerformanceTestRunSettings.json.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/duan1/Assets/Resources/PerformanceTestRunSettings.json.meta" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
