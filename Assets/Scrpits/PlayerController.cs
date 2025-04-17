@@ -15,8 +15,7 @@ public class PlayerController : MonoBehaviour
     public GridSpawner gridSpawner;
     public Transform respawnPoint;
     
-    //public PLboss[] bosses;
-    //public BossJump BossJump;
+    public BossJump BossJump;
 
     
     
@@ -441,7 +440,7 @@ public class PlayerController : MonoBehaviour
             RunEnemyManager.Instance.ResetAllEnemies();
 
         FallSpikeManager.Instance?.ResetAllSpikes();
-        PLBossManager.Instance.ResetAllBosses();
+  
     }
     public bool respawn = false;
     
@@ -490,7 +489,7 @@ public class PlayerController : MonoBehaviour
         audioSource.PlayOneShot(app);
         yield return new WaitForSeconds(0.2f); // Đợi một chút trước khi reset tất cả
 
-        
+        PLBossManager.Instance.ResetAllBosses();
         
         // Kiểm tra null trước khi gọi Reset
 
@@ -499,8 +498,8 @@ public class PlayerController : MonoBehaviour
         
 
 
-        //if (BossJump != null)
-        //    BossJump.ResetBoss();
+        if (BossJump != null)
+            BossJump.ResetBoss();
 
 
 

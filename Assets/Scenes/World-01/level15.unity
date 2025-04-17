@@ -13685,6 +13685,8 @@ GameObject:
   - component: {fileID: 1743600897}
   - component: {fileID: 1743600908}
   - component: {fileID: 1743600909}
+  - component: {fileID: 1743600911}
+  - component: {fileID: 1743600910}
   m_Layer: 0
   m_Name: GameManager (1)
   m_TagString: Untagged
@@ -14080,6 +14082,30 @@ MonoBehaviour:
   - {fileID: 2066294954}
   box: {fileID: 808969343}
   BossJump: {fileID: 2044371432}
+--- !u!114 &1743600910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743600894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e995d6c270f97e408281fc15f3951ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1743600911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743600894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80d4b56c946f7594d821e47b46a15807, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1753290368 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2769326857341477797, guid: 6133b4f792c145d47a3d10e91bf99516, type: 3}
@@ -15579,7 +15605,6 @@ MonoBehaviour:
   flashEffect: {fileID: 1743600906}
   gridSpawner: {fileID: 1743600905}
   respawnPoint: {fileID: 433477675}
-  bosses: []
   BossJump: {fileID: 2044371432}
   jumpSound: {fileID: 8300000, guid: e01a51aa95832914badcea87b283ff90, type: 3}
   dieSound: {fileID: 8300000, guid: c8164515b63e28e4d8af0d062656a3a4, type: 3}
