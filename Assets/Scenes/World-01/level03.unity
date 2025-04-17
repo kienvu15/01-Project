@@ -1950,6 +1950,10 @@ PrefabInstance:
       value: 2.93
       objectReference: {fileID: 0}
     - target: {fileID: 7910578541485055392, guid: ffe304f076561f44ca3b653a8be3f36e, type: 3}
+      propertyPath: speed
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910578541485055392, guid: ffe304f076561f44ca3b653a8be3f36e, type: 3}
       propertyPath: radius
       value: 1.76
       objectReference: {fileID: 0}
