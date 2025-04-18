@@ -31582,7 +31582,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6553089450994590333, guid: 9def13c487876df4aae20c411834db9e, type: 3}
       propertyPath: jumpForce
-      value: 7.2
+      value: 7.17
       objectReference: {fileID: 0}
     - target: {fileID: 6553089450994590333, guid: 9def13c487876df4aae20c411834db9e, type: 3}
       propertyPath: moveForce
@@ -39692,7 +39692,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6553089450994590333, guid: 9def13c487876df4aae20c411834db9e, type: 3}
       propertyPath: jumpForce
-      value: 7.5
+      value: 7.19
       objectReference: {fileID: 0}
     - target: {fileID: 6553089450994590333, guid: 9def13c487876df4aae20c411834db9e, type: 3}
       propertyPath: moveForce
