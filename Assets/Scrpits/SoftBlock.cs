@@ -8,7 +8,6 @@ public class SoftBlock : MonoBehaviour
     private Vector3 initialPosition; // Lưu vị trí ban đầu
     private bool isActivated = false;
 
-    [SerializeField] private float fallDelay = 1f;
     [SerializeField] private float destroyDelay = 2f;
 
     public AudioSource audioSource;

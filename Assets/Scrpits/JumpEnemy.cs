@@ -20,7 +20,13 @@ public class JumpEnemy : MonoBehaviour
     void Update()
     {
         Grounded();
+
+        if (isGround && !canJump)
+        {
+            canJump = true;
+        }
     }
+
     private bool Grounded()
     {
         bool grounded = rb.IsTouchingLayers(LayerMask.GetMask("Ground"));
@@ -37,24 +43,19 @@ public class JumpEnemy : MonoBehaviour
         return grounded;
     }
 
-    
+
 
     // Hàm này sẽ được gọi từ Animation Event
     public void Jump()
     {
-        if (rb == null || isGround==false) return;
+        if (rb == null || isGround == false || canJump == false) return;
 
-        // Xác định hướng nhảy
         float horizontalMove = moveLeft ? -moveForce : moveForce;
-
-        // Thêm lực nhảy
         rb.linearVelocity = new Vector2(horizontalMove, jumpForce);
         Instantiate(DustBlast, Foot.position, Quaternion.Euler(0, 0, 90));
 
-        // Đảo hướng cho lần nhảy tiếp theo
         moveLeft = !moveLeft;
-
-        // Không cho phép nhảy tiếp cho đến khi chạm đất lại
         canJump = false;
     }
+
 }
