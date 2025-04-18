@@ -47,14 +47,8 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://D:/duan1/Assets/Resources.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/duan1/Assets/Resources.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/duan1/Assets/Resources/PerformanceTestRunInfo.json.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/duan1/Assets/Resources/PerformanceTestRunInfo.json.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/duan1/Assets/Resources/PerformanceTestRunInfo.json.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/duan1/Assets/Resources/PerformanceTestRunInfo.json.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/duan1/Assets/Resources/PerformanceTestRunSettings.json.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/duan1/Assets/Resources/PerformanceTestRunSettings.json.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/duan1/Assets/Scenes/Open/Stagelevel.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/duan1/Assets/Scenes/Open/Stagelevel.unity" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -99,6 +93,7 @@
       <workItem from="1743496630643" duration="961000" />
       <workItem from="1744916986907" duration="1011000" />
       <workItem from="1744958211984" duration="828000" />
+      <workItem from="1744965276377" duration="309000" />
     </task>
     <task id="LOCAL-00001" summary="capnhap">
       <option name="closed" value="true" />
