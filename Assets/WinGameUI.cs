@@ -34,5 +34,6 @@ public class WinGameUI : MonoBehaviour
         PlayerPrefs.Save();
 
         SceneManager.LoadScene("Open"); // Quay về màn hình menu hoặc màn 1
+        Debug.Log("Dang an nut");
     }
 }

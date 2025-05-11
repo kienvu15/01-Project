@@ -2921,6 +2921,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lock-Door (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6867779077742927455, guid: a86752a9b5393aa48b41a1311baf0cd1, type: 3}
+      propertyPath: m_Volume
+      value: 0.439
+      objectReference: {fileID: 0}
     - target: {fileID: 7327185574582124470, guid: a86752a9b5393aa48b41a1311baf0cd1, type: 3}
       propertyPath: m_SortingLayer
       value: -1
@@ -4251,6 +4255,10 @@ PrefabInstance:
     - target: {fileID: 6369927593555716334, guid: a86752a9b5393aa48b41a1311baf0cd1, type: 3}
       propertyPath: m_Name
       value: Lock-Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 6867779077742927455, guid: a86752a9b5393aa48b41a1311baf0cd1, type: 3}
+      propertyPath: m_Volume
+      value: 0.465
       objectReference: {fileID: 0}
     - target: {fileID: 7327185574582124470, guid: a86752a9b5393aa48b41a1311baf0cd1, type: 3}
       propertyPath: m_SortingLayer

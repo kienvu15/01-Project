@@ -910,7 +910,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8533837468605900803, guid: 4b26ddfa46dfcec488b82293118c2675, type: 3}
       propertyPath: moveSpeed
-      value: 3.5
+      value: 2.91
       objectReference: {fileID: 0}
     - target: {fileID: 8533837468605900803, guid: 4b26ddfa46dfcec488b82293118c2675, type: 3}
       propertyPath: movePoints.Array.size
@@ -1405,6 +1405,10 @@ PrefabInstance:
     - target: {fileID: 6369927593555716334, guid: a86752a9b5393aa48b41a1311baf0cd1, type: 3}
       propertyPath: m_Name
       value: Lock-Door (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6867779077742927455, guid: a86752a9b5393aa48b41a1311baf0cd1, type: 3}
+      propertyPath: m_Volume
+      value: 0.589
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11455,7 +11459,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8533837468605900803, guid: 4b26ddfa46dfcec488b82293118c2675, type: 3}
       propertyPath: moveSpeed
-      value: 3.5
+      value: 2.91
       objectReference: {fileID: 0}
     - target: {fileID: 8533837468605900803, guid: 4b26ddfa46dfcec488b82293118c2675, type: 3}
       propertyPath: movePoints.Array.size

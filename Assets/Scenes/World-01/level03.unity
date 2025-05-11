@@ -362,6 +362,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lock-Door (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6867779077742927455, guid: a86752a9b5393aa48b41a1311baf0cd1, type: 3}
+      propertyPath: m_Volume
+      value: 0.439
+      objectReference: {fileID: 0}
+    - target: {fileID: 6867779077742927455, guid: a86752a9b5393aa48b41a1311baf0cd1, type: 3}
+      propertyPath: MinDistance
+      value: 0.9652473
+      objectReference: {fileID: 0}
     - target: {fileID: 7327185574582124470, guid: a86752a9b5393aa48b41a1311baf0cd1, type: 3}
       propertyPath: m_SortingLayer
       value: -2
@@ -1865,6 +1873,18 @@ PrefabInstance:
       propertyPath: m_UsedByEffector
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3996873762190341933, guid: ffe304f076561f44ca3b653a8be3f36e, type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996873762190341933, guid: ffe304f076561f44ca3b653a8be3f36e, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996873762190341933, guid: ffe304f076561f44ca3b653a8be3f36e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -14109871
+      objectReference: {fileID: 0}
     - target: {fileID: 4062759723322145028, guid: ffe304f076561f44ca3b653a8be3f36e, type: 3}
       propertyPath: m_Size.y
       value: 0.39008948
@@ -1876,6 +1896,30 @@ PrefabInstance:
     - target: {fileID: 4062759723322145028, guid: ffe304f076561f44ca3b653a8be3f36e, type: 3}
       propertyPath: m_UsedByEffector
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099854860791807027, guid: ffe304f076561f44ca3b653a8be3f36e, type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099854860791807027, guid: ffe304f076561f44ca3b653a8be3f36e, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099854860791807027, guid: ffe304f076561f44ca3b653a8be3f36e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -14109871
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039193944104342755, guid: ffe304f076561f44ca3b653a8be3f36e, type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039193944104342755, guid: ffe304f076561f44ca3b653a8be3f36e, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039193944104342755, guid: ffe304f076561f44ca3b653a8be3f36e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -14109871
       objectReference: {fileID: 0}
     - target: {fileID: 5885674481017484907, guid: ffe304f076561f44ca3b653a8be3f36e, type: 3}
       propertyPath: m_Size.y
@@ -1948,6 +1992,18 @@ PrefabInstance:
     - target: {fileID: 7630567839116498587, guid: ffe304f076561f44ca3b653a8be3f36e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 7761207171648024575, guid: ffe304f076561f44ca3b653a8be3f36e, type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7761207171648024575, guid: ffe304f076561f44ca3b653a8be3f36e, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7761207171648024575, guid: ffe304f076561f44ca3b653a8be3f36e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -14109871
       objectReference: {fileID: 0}
     - target: {fileID: 7910578541485055392, guid: ffe304f076561f44ca3b653a8be3f36e, type: 3}
       propertyPath: speed
@@ -9654,6 +9710,10 @@ PrefabInstance:
     - target: {fileID: 6369927593555716334, guid: a86752a9b5393aa48b41a1311baf0cd1, type: 3}
       propertyPath: m_Name
       value: Lock-Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 6867779077742927455, guid: a86752a9b5393aa48b41a1311baf0cd1, type: 3}
+      propertyPath: m_Volume
+      value: 0.435
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
